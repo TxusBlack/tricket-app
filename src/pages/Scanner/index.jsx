@@ -1,8 +1,10 @@
-import React from 'react'
+import Dashboard from "../../layouts/Dashboard"
 
 const ScannerPage = () => {
   return (
-    <div>Scanner</div>
+    <Dashboard>
+      Scanner
+    </Dashboard>
   )
 }
 
