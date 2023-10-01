@@ -17,8 +17,13 @@ const CardCheckIn = ({ text }) => {
 const ScannerPage = () => {
   return (
     <Dashboard>
-      <div className="flex flex-row">
-        <CardCheckIn text="Check-in realizados" />
+      <div className="grid grid-cols-12 gap-4">
+        <div className="col-span-7">
+          <CardCheckIn text="Check-in realizados" />
+        </div>
+        <div className="col-span-5">
+          <CardCheckIn text="Check-in realizados" />
+        </div>
       </div>
     </Dashboard>
   )

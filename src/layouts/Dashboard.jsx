@@ -114,7 +114,7 @@ const SearchInput = () => {
 const Header = ({ toggle }) => {
   return (
     <>
-      <header className="flex p-10 text-semibold text-gray-100 bg-[#f2c453] flex-col rounded-b-[28px]">
+      <header className="flex px-10 py-8 text-semibold text-gray-100 bg-[#f2c453] flex-col rounded-b-[28px]">
         <div className="flex align-center">
           {/* <button className="mr-4 pb-10" onClick={toggle}>
             <svg
@@ -137,7 +137,7 @@ const Header = ({ toggle }) => {
               <SearchInput />
             </div>
             <div className="h-100 flex align-center pl-4">
-              <button onClick={() => console.log(0)} className="px-4">
+              <button onClick={() => console.log(0)} className="px-6">
                 <img src="/icons/avatar.png" alt="Icon Avatar" className="w-10 h-10" />
               </button>
               <button onClick={toggle}>
