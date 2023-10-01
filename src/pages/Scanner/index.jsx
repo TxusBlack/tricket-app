@@ -1,9 +1,25 @@
 import Dashboard from "../../layouts/Dashboard"
 
+const CardCheckIn = ({ text }) => {
+  return (
+    <div className="bg-white rounded-[22px] py-6 px-10">
+      <h3 className="font-semibold text-xl text-zinc-600">{ text }</h3>
+      <div className="flex align-center justify-center">
+        <div className="flex flex-col items-center">
+          <h4 className="w-48 text-center text-zinc-300 font-semibold text-sm">Aún no se ha realizado ningún check-in!</h4>
+          <img src="/icons/buzon.png" alt="Buzon" className="w-32 p-4" />
+        </div>
+      </div>
+    </div>
+  )
+}
+
 const ScannerPage = () => {
   return (
     <Dashboard>
-      Scanner
+      <div className="flex flex-row">
+        <CardCheckIn text="Check-in realizados" />
+      </div>
     </Dashboard>
   )
 }
