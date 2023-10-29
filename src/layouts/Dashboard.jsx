@@ -1,6 +1,7 @@
 import { useToggle } from "@uidotdev/usehooks";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const ItemTitleSidebar = ({ text }) => {
   return (
@@ -175,7 +176,7 @@ const Dashboard = ({ children }) => {
           <main className="p-10">{children}</main>
         </div>
       </div>
-      <footer>Test</footer>
+      <Footer />
     </>
   );
 };
