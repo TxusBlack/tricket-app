@@ -1,102 +1,56 @@
 const Footer = () => {
   return (
-    <footer className="flex flex-col items-center bg-[#303030] text-center lg:text-left">
-      <div className="container p-6 md:pt-16 md:pb-12 md:px-24">
-        <div className="grid place-items-start md:grid-cols-2 lg:grid-cols-5 pb-4">
-          <div className="mb-6 md:ml-8 flex">
+    <footer className="bg-[#303030] text-white">
+      <div className="container p-6 md:p-12">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
+          <div className="md:mb-6">
             <img
               src="/icons/tricket-logo-white.png"
               alt="Tricket Logo"
-              className="w-6/12"
+              className="mx-auto w-32 lg:w-auto"
             />
           </div>
 
-          <div className="mb-6">
-            <h5 className="mb-2.5 font-bold uppercase text-white">Información</h5>
-
-            <ul className="mb-0 list-none">
-              <li>
-                <a href="#!" className="text-white">
-                  ¿Quiénes somos?
-                </a>
-              </li>
-              <li>
-                <a href="#!" className="text-white">
-                  Términos legales
-                </a>
-              </li>
+          <div className="md:mb-6">
+            <h5 className="mb-2.5 font-bold uppercase">Información</h5>
+            <ul className="list-none">
+              <li><a href="#!" className="hover:underline">¿Quiénes somos?</a></li>
+              <li><a href="#!" className="hover:underline">Términos legales</a></li>
             </ul>
           </div>
 
-          <div className="mb-6">
-            <h5 className="mb-2.5 font-bold uppercase text-white">Perfil</h5>
-
-            <ul className="mb-0 list-none">
-              <li>
-                <a href="#!" className="text-white">
-                  Organizador
-                </a>
-              </li>
-              <li>
-                <a href="#!" className="text-white">
-                  Usuario
-                </a>
-              </li>
+          <div className="md:mb-6">
+            <h5 className="mb-2.5 font-bold uppercase">Perfil</h5>
+            <ul className="list-none">
+              <li><a href="#!" className="hover:underline">Organizador</a></li>
+              <li><a href="#!" className="hover:underline">Usuario</a></li>
             </ul>
           </div>
 
-          <div className="mb-6">
-            <h5 className="mb-2.5 font-bold uppercase text-white">Ayuda</h5>
-
-            <ul className="mb-0 list-none">
-              <li>
-                <a href="#!" className="text-white">
-                  Preguntas frecuentes
-                </a>
-              </li>
-              <li>
-                <a href="#!" className="text-white">
-                  Contáctanos
-                </a>
-              </li>
+          <div className="md:mb-6">
+            <h5 className="mb-2.5 font-bold uppercase">Ayuda</h5>
+            <ul className="list-none">
+              <li><a href="#!" className="hover:underline">Preguntas frecuentes</a></li>
+              <li><a href="#!" className="hover:underline">Contáctanos</a></li>
             </ul>
           </div>
 
-          <div className="mb-6">
-            <h5 className="mb-2.5 font-bold uppercase text-white">Síguenos en</h5>
-
-            <ul className="mb-0 list-none flex">
-              <li className="pr-4">
-                <a href="#!" className="text-white">
-                  <img src="/icons/icon-fb.png" className="w-2/4" alt="Icono Facebook" />
-                </a>
-              </li>
-              <li>
-                <a href="#!" className="text-white">
-                  <img src="/icons/icon-instagram.png" className="w-2/4" alt="Icono Instagram" />
-                </a>
-              </li>
-              <li>
-                <a href="#!" className="text-white">
-                  <img src="/icons/icon-twitter.png" className="w-2/4" alt="Icono Twitter" />
-                </a>
-              </li>
+          <div className="md:mb-6">
+            <h5 className="mb-2.5 font-bold uppercase">Síguenos en</h5>
+            <ul className="flex justify-center space-x-4 pb-2 md:pb-4">
+              <li><a href="#!"><img className="h-8 w-auto mb-2" src="/icons/icon-fb.png" alt="Icono Facebook" /></a></li>
+              <li><a href="#!"><img className="h-8 w-auto mb-2" src="/icons/icon-instagram.png" alt="Icono Instagram" /></a></li>
+              <li><a href="#!"><img className="h-8 w-auto mb-2" src="/icons/icon-twitter.png" alt="Icono Twitter" /></a></li>
             </ul>
           </div>
         </div>
-        <div className="w-full bg-[#303030] p-4 pb-0 text-center text-white border-t border-slate-200">
+        <div className="text-center border-t border-slate-200 p-4">
           <p>
             Al continuar en esta página, usted acuerda regirse por nuestros
-            <a
-              className="pl-1 text-white font-bold dark:text-neutral-400"
-              href="#"
-            >
-              Términos de uso.
-            </a>
+            <a href="#" className="font-bold underline pl-1">Términos de uso.</a>
           </p>
         </div>
       </div>
-
     </footer>
   );
 };
