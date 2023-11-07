@@ -1,6 +1,7 @@
 import { useToggle } from "@uidotdev/usehooks";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { isMobile } from "react-device-detect";
 import Footer from "../components/Footer";
 
 const ItemTitleSidebar = ({ text }) => {
@@ -86,10 +87,10 @@ const SearchInput = () => {
   const [value, setValue] = useState(null);
 
   return (
-    <div className="relative">
+    <div className="relative w-full	">
       <input
         type="text"
-        className="p-4 pl-12 rounded-full border border-[#ecc568] bg-[#ecc568] text-white placeholder-white focus:outline-none"
+        className="w-full p-4 pl-12 rounded-full border border-[#ecc568] bg-[#ecc568] text-white placeholder-white focus:outline-none"
         placeholder="Buscar"
         value={value}
         onChange={(e) => setValue(e.target.value)}
@@ -110,39 +111,45 @@ const SearchInput = () => {
       </svg>
     </div>
   );
-}
+};
 
 const Header = ({ toggle }) => {
   return (
     <>
-      <header className="flex px-10 py-8 text-semibold text-gray-100 bg-[#f2c453] flex-col rounded-b-[28px]">
+      <header className="flex p-6 pb-5 md:px-10 md:py-8 md:pb-8 text-semibold text-gray-100 bg-[#f2c453] flex-col rounded-b-[28px]">
         <div className="flex align-center">
-          {/* <button className="mr-4 pb-10" onClick={toggle}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="h-6 w-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button> */}
-          <div className="mr-4 pb-10 flex justify-between w-full">
-            <div>
-              <SearchInput />
-            </div>
-            <div className="h-100 flex align-center pl-4">
-              <button onClick={() => console.log(0)} className="px-6">
-                <img src="/icons/avatar.png" alt="Icon Avatar" className="w-10 h-10" />
+          <div className="md:mr-4 pb-10 flex justify-between w-full">
+            <div className="flex justify-between items-center pb-10 w-full">
+              {/* Botón de menú, visible en móviles y oculto en pantallas más grandes */}
+              <button onClick={toggle} className="block md:hidden pr-4 md:px-4">
+                <img
+                  src="/icons/menu.png"
+                  alt="Icon Menu"
+                  className="w-10 sm:w-8 md:w-8 h-full"
+                />
               </button>
-              <button onClick={toggle}>
-                <img src="/icons/menu.png" alt="Icon Menu" className="w-6 h-6" />
+
+              {/* SearchInput siempre visible */}
+              <div className="flex-grow px-0 md:px-4">
+                <SearchInput />
+              </div>
+
+              {/* Botón de avatar, siempre visible */}
+              <button onClick={() => console.log(0)} className="pl-4 mr-[-12px] md:px-4">
+                <img
+                  src="/icons/avatar.png"
+                  alt="Icon Avatar"
+                  className="w-14 h-auto"
+                />
+              </button>
+
+              {/* Botón de menú, oculto en móviles y visible en pantallas más grandes */}
+              <button onClick={() => {}} className="hidden md:block md:px-4">
+                <img
+                  src="/icons/menu.png"
+                  alt="Icon Menu"
+                  className="w-10 sm:w-8 md:w-8 h-full"
+                />
               </button>
             </div>
           </div>
@@ -160,6 +167,12 @@ const Header = ({ toggle }) => {
 
 const Dashboard = ({ children }) => {
   const [sidebarOpen, toggle] = useToggle(true);
+
+  useEffect(() => {
+    if (isMobile) {
+      toggle(false);
+    }
+  }, [toggle]);
 
   return (
     <>
