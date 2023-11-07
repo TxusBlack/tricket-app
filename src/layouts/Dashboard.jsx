@@ -176,17 +176,19 @@ const Dashboard = ({ children }) => {
 
   return (
     <>
-      <div className="flex overflow-x-hidden h-screen">
+      <div className="flex overflow-x-hidden min-h-screen">
         <aside
-          className={`flex-shrink-0 w-64 flex flex-col border-r transition-all duration-300 ${
-            !sidebarOpen ? "-ml-64" : ""
+          className={`transform top-0 left-0 w-64 bg-white fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30 ${
+            sidebarOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
           <SidebarComponent />
         </aside>
         <div className="flex-1 bg-[#f1f2f2]">
           <Header toggle={toggle} />
-          <main className="p-10">{children}</main>
+          <main className="p-6 md:p-10 flex-grow">
+            {children}
+          </main>
         </div>
       </div>
       <Footer />

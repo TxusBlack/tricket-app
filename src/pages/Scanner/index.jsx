@@ -1,20 +1,20 @@
-import Dashboard from "../../layouts/Dashboard"
-import CardCheckIn from "../../components/cards/CardCheckIn"
-import CardQR from "../../components/cards/CardQR"
+import Dashboard from "../../layouts/Dashboard";
+import CardCheckIn from "../../components/cards/CardCheckIn";
+import CardQR from "../../components/cards/CardQR";
 
 const ScannerPage = () => {
   return (
     <Dashboard>
-      <div className="grid grid-cols-12 gap-4">
-        <div className="col-span-8">
+      <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex-1">
           <CardCheckIn text="Check-in realizados" />
         </div>
-        <div className="col-span-4">
+        <div className="flex-1">
           <CardQR text="Empezar a escanear" />
         </div>
       </div>
     </Dashboard>
-  )
-}
+  );
+};
 
-export default ScannerPage
+export default ScannerPage;
