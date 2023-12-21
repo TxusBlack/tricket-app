@@ -36,7 +36,7 @@ const ItemLinkSidebar = ({ imageSrc, imageAlt, text }) => {
 const SidebarComponent = () => {
   return (
     <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800">
-      <div className="flex flex-col top-0 left-0 w-64 bg-white h-full border-r">
+      <div className="flex flex-col top-0 left-0 w-64 md:w-48 lg:w-64 bg-white h-full border-r">
         <div className="flex items-center justify-center pt-4">
           <img
             src="/icons/tricket-logo-black.png"
@@ -87,7 +87,7 @@ const SearchInput = () => {
   const [value, setValue] = useState(null);
 
   return (
-    <div className="relative w-full	">
+    <div className="relative w-full">
       <input
         type="text"
         className="w-full p-4 pl-12 rounded-full border border-[#ecc568] bg-[#ecc568] text-white placeholder-white focus:outline-none"
@@ -117,41 +117,39 @@ const Header = ({ toggle }) => {
   return (
     <>
       <header className="flex p-6 pb-5 md:px-10 md:py-8 md:pb-8 text-semibold text-gray-100 bg-[#f2c453] flex-col rounded-b-[28px]">
-        <div className="flex align-center">
-          <div className="md:mr-4 pb-10 flex justify-between w-full">
-            <div className="flex justify-between items-center pb-10 w-full">
-              {/* Botón de menú, visible en móviles y oculto en pantallas más grandes */}
-              <button onClick={toggle} className="block md:hidden pr-4 md:px-4">
-                <img
-                  src="/icons/menu.png"
-                  alt="Icon Menu"
-                  className="w-10 sm:w-8 md:w-8 h-full"
-                />
-              </button>
+        <div className="md:mr-4 pb-10 flex justify-between w-full">
+          <div className="flex justify-between items-center pb-10 w-full">
+            {/* Botón de menú, visible en móviles y oculto en pantallas más grandes */}
+            <button onClick={toggle} className="block md:hidden pr-4 md:px-4">
+              <img
+                src="/icons/menu.png"
+                alt="Icon Menu"
+                className="w-10 sm:w-8 md:w-8 h-full"
+              />
+            </button>
 
-              {/* SearchInput siempre visible */}
-              <div className="flex-grow px-0 md:px-4">
-                <SearchInput />
-              </div>
-
-              {/* Botón de avatar, siempre visible */}
-              <button onClick={() => console.log(0)} className="pl-4 mr-[-12px] md:px-4">
-                <img
-                  src="/icons/avatar.png"
-                  alt="Icon Avatar"
-                  className="w-14 h-auto"
-                />
-              </button>
-
-              {/* Botón de menú, oculto en móviles y visible en pantallas más grandes */}
-              <button onClick={() => {}} className="hidden md:block md:px-4">
-                <img
-                  src="/icons/menu.png"
-                  alt="Icon Menu"
-                  className="w-10 sm:w-8 md:w-8 h-full"
-                />
-              </button>
+            {/* SearchInput siempre visible */}
+            <div className="flex-grow px-0 md:px-4">
+              <SearchInput />
             </div>
+
+            {/* Botón de avatar, siempre visible */}
+            <button onClick={() => console.log(0)} className="pl-4 mr-[-12px] md:px-4">
+              <img
+                src="/icons/avatar.png"
+                alt="Icon Avatar"
+                className="w-14 h-auto"
+              />
+            </button>
+
+            {/* Botón de menú, oculto en móviles y visible en pantallas más grandes */}
+            <button onClick={toggle} className="hidden md:block md:px-4">
+              <img
+                src="/icons/menu.png"
+                alt="Icon Menu"
+                className="w-10 sm:w-8 md:w-8 h-full"
+              />
+            </button>
           </div>
         </div>
         <div>
@@ -176,19 +174,17 @@ const Dashboard = ({ children }) => {
 
   return (
     <>
-      <div className="flex overflow-x-hidden min-h-screen">
+      <div className="flex overflow-x-hidden h-screen">
         <aside
-          className={`transform top-0 left-0 w-64 bg-white fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30 ${
-            sidebarOpen ? "translate-x-0" : "-translate-x-full"
+          className={`flex-shrink-0 w-64 md:w-48 lg:w-64 flex flex-col border-r transition-all duration-300 ${
+            !sidebarOpen ? "-ml-64 md:-ml-48 lg:-ml-64" : ""
           }`}
         >
           <SidebarComponent />
         </aside>
         <div className="flex-1 bg-[#f1f2f2]">
           <Header toggle={toggle} />
-          <main className="p-6 md:p-10 flex-grow">
-            {children}
-          </main>
+          <main className="p-6 md:p-10">{children}</main>
         </div>
       </div>
       <Footer />

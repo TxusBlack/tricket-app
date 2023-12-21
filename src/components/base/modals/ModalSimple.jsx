@@ -1,7 +1,4 @@
-import { useState } from "react";
-
 const ModalSimple = ({ showModal, setShowModal, body }) => {
-  // const [showModal, setShowModal] = useState(false);
   return (
     <>
       {showModal ? (
