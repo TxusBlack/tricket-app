@@ -1,6 +1,6 @@
-import Dashboard from "../../layouts/Dashboard";
-import CardCheckIn from "../../components/cards/CardCheckIn";
-import CardQR from "../../components/cards/CardQR";
+import Dashboard from '../../components/templates/Dashboard';
+import CardCheckIn from "../../components/molecules/cards/CardCheckIn";
+import CardQR from "../../components/molecules/cards/CardQR";
 
 const ScannerPage = () => {
   return (

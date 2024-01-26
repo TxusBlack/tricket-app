@@ -1,0 +1,25 @@
+:root {
+    --color-primary: #007bff;
+    --color-light: #fff;
+    --color-success: #088A08;
+    --color-outline: #acacac;
+    --color-outline-success: #088A08;
+
+    /* HOVER */
+    --color-primary-hover: #0069d9;
+    --color-success-hover: #0B610B;
+    --color-outline-hover: #acacac;
+    --color-outline-success-hover: #0B610B;
+  
+    /* ACTIVE */
+    --color-primary-active: #0062cc;
+    --color-success-active: #0B610B;
+    --color-outline-active: #acacac;
+    --color-outline-success-active: #0B610B;
+
+    /* DISABLED */
+    --color-primary-disabled: #007bff;
+    --color-success-disabled: #0B610B;
+    --color-outline-disabled: #acacac;
+    --color-outline-success-disabled: #0B610B;
+}

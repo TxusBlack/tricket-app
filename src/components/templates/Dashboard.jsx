@@ -2,7 +2,7 @@ import { useToggle } from "@uidotdev/usehooks";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { isMobile } from "react-device-detect";
-import Footer from "../components/Footer";
+import Footer from "../organims/Tk-Footer/Footer";
 
 const ItemTitleSidebar = ({ text }) => {
   return (

@@ -1,0 +1,119 @@
+@import url("../settings/colors.css");
+
+
+
+.tk-button--primary {
+  background-color: var(--color-primary);
+  border: none;
+  color: var(--color-light);
+}
+
+.tk-button--primary:hover {
+  background-color: var(--color-primary-hover);
+  border: none;
+  color: var(--color-light);
+}
+
+.tk-button--primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.tk-button--primary:active {
+  background-color: var(--color-primary-active);
+  border: none;
+  color: var(--color-light);
+}
+
+.tk-button--primary:disabled {
+  background-color: var(--color-primary-disabled);
+  border: none;
+  color: var(--color-light);
+}
+
+.tk-button--success {
+  background-color: var(--color-success);
+  border: none;
+  color: var(--color-light);
+}
+
+.tk-button--success:hover {
+  background-color: var(--color-success-hover);
+  border: none;
+  color: var(--color-light);
+}
+
+.tk-button--success:focus {
+  box-shadow: 0 0 0 0.2rem rgba(4, 204, 48, 0.5);
+}
+
+.tk-button--success:active {
+  background-color: var(--color-success-active);
+  border: none;
+  color: var(--color-light);
+}
+
+.tk-button--success:disabled {
+  background-color: var(--color-success-disabled);
+  border: none;
+  color: var(--color-light);
+}
+
+.tk-button--outline {
+  background-color: var(--color-light);
+  border: 3px solid var(--color-outline);
+  color: var(--color-outline);
+}
+
+.tk-button--outline:hover {
+  background-color: var(--color-outline-hover);
+  border: 3px solid var(--color-outline);
+  color: var(--color-light);
+}
+
+.tk-button--outline:focus {
+  box-shadow: 0 0 0 0.2rem rgba(133, 134, 133, 0.5);
+}
+
+.tk-button--outline:active {
+  background-color: var(--color-outline-active);
+  border: 3px solid var(--color-outline-active);
+  color: var(--color-light);
+}
+
+.tk-button--outline:disabled {
+  background-color: var(--color-outline-disabled);
+  border: 3px solid var(--color-outline);
+  color: var(--color-light);
+}
+
+.tk-button--outline-success {
+  background-color: var(--color-light);
+  border: 3px solid var(--color-outline-success);
+  color: var(--color-outline-success);
+}
+
+.tk-button--outline-success:hover {
+  background-color: var(--color-light);
+  border: 3px solid var(--color-outline-success-hover);
+  color: var(--color-outline-success-hover);
+}
+
+.tk-button--outline-success:focus {
+  box-shadow: 0 0 0 0.2rem rgba(4, 204, 48, 0.5);
+}
+
+.tk-button--outline-success:active {
+  background-color: var(--color-light);
+  border: 3px solid var(--color-outline-success-active);
+  color: var(--color-outline-success-active);
+}
+
+.tk-button--outline-success:disabled {
+  background-color: var(--color-outline-disabled);
+  border: 3px solid var(--color-outline);
+  color: var(--color-light);
+}
+
+
+
+

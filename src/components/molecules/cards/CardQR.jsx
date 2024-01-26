@@ -1,7 +1,7 @@
 import { useState } from "react";
-import BtnPrimary from "../base/buttons/BtnPrimary";
+import TkButton from "../../atoms/Tk-Button/tk-button";
 import QrReader from "react-qr-scanner";
-import ModalSimple from "../base/modals/ModalSimple";
+import TkModal from "../Tk-Modal/tk-modal";
 
 const CardQR = ({ text }) => {
   const [showModal, setShowModal] = useState(false);
@@ -33,8 +33,8 @@ const CardQR = ({ text }) => {
           />
         </div>
       </div>
-      <BtnPrimary text="Escanear nuevo código QR" onClick={() => setShowModal(true)} />
-      <ModalSimple
+      <TkButton text="Escanear nuevo código QR" onClick={() => setShowModal(true)} />
+      <TkModal
         body={
           <>
             <QrReader

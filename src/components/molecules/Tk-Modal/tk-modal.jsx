@@ -1,4 +1,4 @@
-const ModalSimple = ({ showModal, setShowModal, body }) => {
+const TkModal = ({ showModal, setShowModal, body }) => {
   return (
     <>
       {showModal ? (
@@ -29,4 +29,4 @@ const ModalSimple = ({ showModal, setShowModal, body }) => {
   );
 };
 
-export default ModalSimple;
+export default TkModal;
