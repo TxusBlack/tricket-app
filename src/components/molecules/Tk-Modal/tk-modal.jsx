@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const TkModal = ({ showModal, setShowModal, body }) => {
   return (
     <>
@@ -27,6 +29,12 @@ const TkModal = ({ showModal, setShowModal, body }) => {
       ) : null}
     </>
   );
+};
+
+TkModal.propTypes = {
+  showModal: PropTypes.bool.isRequired,
+  setShowModal: PropTypes.func.isRequired,
+  body: PropTypes.object.isRequired,
 };
 
 export default TkModal;

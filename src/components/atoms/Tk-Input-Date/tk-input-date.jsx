@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from 'prop-types';
 
 const TkInputDate = ({
     label
@@ -14,5 +14,10 @@ const TkInputDate = ({
         </div>
     )
 };
+
+TkInputDate.propTypes = {
+    label: PropTypes.string.isRequired,
+};
+
 
 export default TkInputDate;

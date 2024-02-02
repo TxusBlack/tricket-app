@@ -1,0 +1,31 @@
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;    
+}
+
+.tab-buttons {
+    color: #1f1111;
+    cursor: pointer;
+    display: flex;
+    text-align: left;
+}
+
+.tab-button {    
+    margin: 0 10px;
+    font-size: var(--font-size-large);
+    font-weight: bold;
+    color: #b9b9b9;
+}
+
+.tab-content {
+    height: 400px;
+    overflow: auto;
+}
+
+.tab-buttons .active {
+    display: block;
+    border-bottom: 3px solid #2980b9;
+    border-radius: 2px;
+    color: black;
+}

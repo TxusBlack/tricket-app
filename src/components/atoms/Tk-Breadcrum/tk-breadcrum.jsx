@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 const TkBreadcrum = ({items}) => {
   return (
@@ -13,5 +13,9 @@ const TkBreadcrum = ({items}) => {
     </div>
   );
 }
+
+TkBreadcrum.propTypes = {
+  items: PropTypes.array,
+};
 
 export default TkBreadcrum;

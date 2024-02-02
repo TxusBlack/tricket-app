@@ -4,8 +4,11 @@
 @import url('./atoms/tk-button.css');
 @import url('./atoms/tk-input-select.css');
 @import url('./atoms/tk-card.css');
+@import url('./atoms//tk-card-ticket.css');
 
 /* MOLECULAS */
+@import url('./molecules/tk-tabs.css');
+@import url('./molecules/tk-ticket.css');
 
 /* ORGANISMOS */
 

@@ -1,0 +1,27 @@
+@import url('../settings/sizes.css');
+
+.tk-ticket{
+    height: 100%;
+    padding: 15px 30px;
+}
+
+.tk-ticket__price{
+    color: var(--color-primary);
+    font-size: var(--font-size-xlarge);
+    font-weight: bold;
+    height: 100%;
+    line-height: var(--line-height-large);
+    text-align: left;
+    width: 120px;
+}
+
+.tk-ticket__position{
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-large);
+    text-align: left;
+    width: 200px;
+}
+
+.tk-ticket__position__row{
+    color: var(--color-outline);
+}
