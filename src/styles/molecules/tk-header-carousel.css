@@ -1,0 +1,14 @@
+.header {
+    height: 80vh;
+    overflow: hidden;
+}
+
+.header__content {
+    height: 100%;
+}
+
+.header__content-image{
+    height: max-content;
+    width: 100%;
+    object-fit: cover;
+}

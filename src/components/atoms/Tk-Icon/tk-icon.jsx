@@ -5,7 +5,7 @@ import * as allIcons from 'react-icons/io';
 
 const TkIcon = ({
     iconName,
-    size,
+    size='1.5rem',
     color,
     className
 }) => {

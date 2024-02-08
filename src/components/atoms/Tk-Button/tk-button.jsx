@@ -1,21 +1,25 @@
 import PropTypes from 'prop-types';
+import TkIcon from '../Tk-Icon/tk-icon';
 
-const TkButton = ({ 
+const TkButton = ({
     isShowIcon,
     nameIcon,
     label,
-    type='primary',
-    executeButton 
+    type = 'primary',
+    size,
+    executeButton
 }) => {
-    return (  
-    <button 
-        className={` tk-button--${type} rounded-full w-full py-3 mx-2 flex align-center justify-center text-base font-bold`}
-        onClick={executeButton}>
-            {isShowIcon && <i className="fa-solid">{nameIcon}</i>}
-        {label}
-    </button>
+    return (
+        <button
+            className={`tk-button tk-button--${type} tk-button__${size} mx-2 font-bold`}
+            onClick={executeButton}>
+            {
+                isShowIcon && <TkIcon className={`${size}`} iconName={nameIcon} />
+            }
+            <span className={`tk-button-label__${size}`}>{label}</span>
+        </button>
     )
-  }
+}
 
 TkButton.propTypes = {
     isShowIcon: PropTypes.bool,
@@ -27,5 +31,5 @@ TkButton.propTypes = {
 };
 
 
-  
-  export default TkButton;
+
+export default TkButton;

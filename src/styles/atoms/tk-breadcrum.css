@@ -1,0 +1,32 @@
+@import url('../settings/colors.css');
+
+.breadcrumb{
+    display: flex;
+}
+
+.breadcrumb-item{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.breadcrumb-item__link {
+    color: var(--color-outline);
+    text-decoration: none;
+}
+
+.breadcrumb-item__link:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-item__link--active {
+    color: #000;
+    font-weight: 700;
+}
+
+.breadcrumb-icon {
+    margin-right: 5px;
+    color: var(--color-outline);
+}

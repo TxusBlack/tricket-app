@@ -1,4 +1,4 @@
-import TkListTickets from "../../components/organims/Tk-List-Tickets/tk-list-tickets";
+import TkListTickets from "../../../components/organims/Tk-List-Tickets/tk-list-tickets";
 
 
 const listTickets = [
@@ -110,7 +110,7 @@ const OrganismPage = () => {
 
             <div className="my-5">
                 <h1 className="font-bold text-3xl mb-3">List Tickets</h1>
-                <TkListTickets listTickets={listTickets} BetterListTickets={BetterListTickets} />
+                <TkListTickets listTickets={listTickets} BetterListTickets={BetterListTickets}/>
             </div>
 
         </div>

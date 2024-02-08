@@ -1,4 +1,5 @@
 /* ATOMOS */
+@import url('./atoms//tk-breadcrum.css');
 @import url('./atoms/tk-input-date.css');
 @import url('./atoms//tk-input.css');
 @import url('./atoms/tk-button.css');
@@ -7,6 +8,11 @@
 @import url('./atoms//tk-card-ticket.css');
 
 /* MOLECULAS */
+@import url('./molecules/tk-counter.css');
+@import url('./molecules//tk-filters.css');
+@import url('./molecules/tk-header-carousel.css');
+@import url('./molecules//tk-modal.css');
+@import url('./molecules//tk-steps.css');
 @import url('./molecules/tk-tabs.css');
 @import url('./molecules/tk-ticket.css');
 

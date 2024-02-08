@@ -1,14 +1,12 @@
-import TkButton from "../../components/atoms/Tk-Button/tk-button";
-import TkIcon from "../../components/atoms/Tk-Icon/tk-icon";
-import TkBreadcrum from "../../components/atoms/Tk-Breadcrum/tk-breadcrum";
-import TkCard from "../../components/atoms/Tk-Card/tk-card";
-import TkIconButton from "../../components/atoms/Tk-Icon-Button/tk-icon-button";
-import TkInput from "../../components/atoms/Tk-Input/tk-input";
-import TkInputDate from "../../components/atoms/Tk-Input-Date/tk-input-date";
-import TkInputSelect from "../../components/atoms/Tk-Input-Select/tk-input-select";
-import TkCardTicket from "../../components/atoms/Tk-Card-Ticket/tk-card-ticket";
-
-const ItemsBreadcrumb = ['Home', 'Library', 'Data'];
+import TkButton from "../../../components/atoms/Tk-Button/tk-button";
+import TkIcon from "../../../components/atoms/Tk-Icon/tk-icon";
+import TkBreadcrum from "../../../components/atoms/Tk-Breadcrum/tk-breadcrum";
+import TkCard from "../../../components/atoms/Tk-Card/tk-card";
+import TkIconButton from "../../../components/atoms/Tk-Icon-Button/tk-icon-button";
+import TkInput from "../../../components/atoms/Tk-Input/tk-input";
+import TkInputDate from "../../../components/atoms/Tk-Input-Date/tk-input-date";
+import TkInputSelect from "../../../components/atoms/Tk-Input-Select/tk-input-select";
+import TkCardTicket from "../../../components/atoms/Tk-Card-Ticket/tk-card-ticket";
 
 const optionsSelect = [
     { value: '1', label: 'Opcion 1' },
@@ -26,6 +24,12 @@ const plazasOptions = [
     { value: '5', label: 'Posterior' },
 ];
 
+const ItemsBreadcrumb = [
+    { label: 'Home', url: '/' },
+    { label: 'Components', url: '/components'},
+    { label: 'Atoms', url: '/atoms' }
+  ];
+
 const functionIconButton = () => {
     console.log("Execute icon button");
 };
@@ -40,11 +44,26 @@ const AtomsPage = () => {
 
             <div className="my-5">
                 <h1 className="font-bold text-3xl mb-3">Buttons</h1>
+                <h2 className="font-bold text-2xl my-3">Small</h2>
                 <div className="grid gap-4 grid-cols-4" >
-                    <TkButton isShowIcon={true} nameIcon={'fa-house'} label="Button primary" type="primary" />
-                    <TkButton label="Button Success" type="success" />
-                    <TkButton isShowIcon={true} label="Button Outline" type="outline" />
-                    <TkButton label="Button Outline Success" type="outline-success" />
+                    <TkButton isShowIcon={true} nameIcon={'IoIosTrash'} label="Button primary" type="primary" size={'small'} />
+                    <TkButton label="Button Success" type="success" size={'small'} />
+                    <TkButton isShowIcon={true} label="Button Outline" type="outline" size={'small'} />
+                    <TkButton label="Button Outline Success" type="outline-success" size={'small'} />
+                </div>
+                <h2 className="font-bold text-2xl my-3">Default</h2>
+                <div className="grid gap-4 grid-cols-4" >
+                    <TkButton isShowIcon={true} nameIcon={'IoIosTrash'} label="Button primary" type="primary" size={'default'} />
+                    <TkButton label="Button Success" type="success" size={'default'} />
+                    <TkButton isShowIcon={true} label="Button Outline" type="outline" size={'default'} />
+                    <TkButton label="Button Outline Success" type="outline-success" size={'default'} />
+                </div>
+                <h2 className="font-bold text-2xl my-3">Puffy</h2>
+                <div className="grid gap-4 grid-cols-4" >
+                    <TkButton isShowIcon={true} nameIcon={'IoIosTrash'} label="Button primary" type="primary" size={'puffy'} />
+                    <TkButton label="Button Success" type="success" size={'puffy'} />
+                    <TkButton isShowIcon={true} label="Button Outline" type="outline" size={'puffy'} />
+                    <TkButton label="Button Outline Success" type="outline-success" size={'puffy'} />
                 </div>
             </div>
 
@@ -66,7 +85,7 @@ const AtomsPage = () => {
                             hic tenetur reprehenderit ipsa quod pariatur.
                         </p>
                         <div className="flex my-5" >
-                            <TkButton isShowIcon={true} label="Cancelar" type="outline" ></TkButton>
+                            <TkButton isShowIcon={true} nameIcon={'IoIosTrash'} label="Cancelar" type="outline"></TkButton>
                             <TkButton label="Aceptar" type="success">Aceptar</TkButton>
                         </div>
                     </div>
@@ -107,10 +126,6 @@ const AtomsPage = () => {
                         </form>
                     </div>
                 </TkCard>
-            </div>
-
-            <div className="my-5">
-                <h1 className="font-bold text-3xl mb-3">Cover</h1>
             </div>
 
             <div className="my-5">

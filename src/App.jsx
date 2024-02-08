@@ -1,18 +1,18 @@
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import Dashboard from './components/templates/Dashboard'
 import ScannerPage from './pages/Scanner'
-import AtomsPage from './pages/atoms';
-import MoleculesPage from './pages/molecules';
-import OrganismPage from './pages/organism';
+import AtomsPage from './pages/components/atoms';
+import MoleculesPage from './pages/components/molecules';
+import OrganismPage from './pages/components/organism';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route index path="/" element={<Dashboard />} />
       <Route path="/scanner" element={<ScannerPage />} />
-      <Route path="/atoms" element={<AtomsPage />} />
-      <Route path='/molecules' element={<MoleculesPage/>} />
-      <Route path="/organism" element={<OrganismPage/>} />
+      <Route path="/components/atoms" element={<AtomsPage />} />
+      <Route path='/components/molecules' element={<MoleculesPage/>} />
+      <Route path="/components/organism" element={<OrganismPage/>} />
     </Route>
   )
 )
