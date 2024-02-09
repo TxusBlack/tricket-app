@@ -6,7 +6,7 @@ const TkButton = ({
     nameIcon,
     label,
     type = 'primary',
-    size,
+    size = 'default',
     executeButton
 }) => {
     return (

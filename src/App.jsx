@@ -4,11 +4,13 @@ import ScannerPage from './pages/Scanner'
 import AtomsPage from './pages/components/atoms';
 import MoleculesPage from './pages/components/molecules';
 import OrganismPage from './pages/components/organism';
+import EventsPage from './pages/Events';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route index path="/" element={<Dashboard />} />
+      <Route path="/events" element={<EventsPage />} />
       <Route path="/scanner" element={<ScannerPage />} />
       <Route path="/components/atoms" element={<AtomsPage />} />
       <Route path='/components/molecules' element={<MoleculesPage/>} />
