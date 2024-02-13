@@ -6,6 +6,8 @@
 @import url('./atoms/tk-input-select.css');
 @import url('./atoms/tk-card.css');
 @import url('./atoms//tk-card-ticket.css');
+@import url('./atoms/tk-image-header.css');
+
 
 /* MOLECULAS */
 @import url('./molecules/tk-counter.css');
@@ -20,3 +22,7 @@
 /* ORGANISMOS */
 
 /* TEMPLATES */
+@import url('./templates/default-layout.css');
+
+/* PAGES */	
+@import url('./pages/events.css')

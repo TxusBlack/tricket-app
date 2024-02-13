@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import TkIcon from '../Tk-Icon/tk-icon';
 
 const TkButton = ({
-    isShowIcon,
-    nameIcon,
     label,
+    isShowIcon = false,
+    nameIcon = '',
     type = 'primary',
     size = 'default',
-    executeButton
+    executeButton,
 }) => {
     return (
         <button

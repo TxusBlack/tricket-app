@@ -1,12 +1,13 @@
 import TkButton from "../../../components/atoms/Tk-Button/tk-button";
 import TkIcon from "../../../components/atoms/Tk-Icon/tk-icon";
-import TkBreadcrum from "../../../components/atoms/Tk-Breadcrum/tk-breadcrum";
+import TkBreadcrumb from "../../../components/atoms/Tk-Breadcrum/tk-breadcrum";
 import TkCard from "../../../components/atoms/Tk-Card/tk-card";
 import TkIconButton from "../../../components/atoms/Tk-Icon-Button/tk-icon-button";
 import TkInput from "../../../components/atoms/Tk-Input/tk-input";
 import TkInputDate from "../../../components/atoms/Tk-Input-Date/tk-input-date";
 import TkInputSelect from "../../../components/atoms/Tk-Input-Select/tk-input-select";
 import TkCardTicket from "../../../components/atoms/Tk-Card-Ticket/tk-card-ticket";
+import TkImageHeader from "../../../components/atoms/Tk-Image-Header/tk-image-header";
 
 const optionsSelect = [
     { value: '1', label: 'Opcion 1' },
@@ -37,9 +38,19 @@ const functionIconButton = () => {
 const AtomsPage = () => {
     return (
         <div className="container mx-auto px-4" >
+            <div style={{height: '90vh' }} >
+                tricket
+            </div>
+            <div className="my-5">
+                <TkImageHeader 
+                    image={'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
+                    topPosition={'100px'}
+                />
+            </div>
+
             <div className="my-5">
                 <h1 className="font-bold text-3xl mb-3">Breadcrum</h1>
-                <TkBreadcrum items={ItemsBreadcrumb} />
+                <TkBreadcrumb items={ItemsBreadcrumb} />
             </div>
 
             <div className="my-5">

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import TkIcon from '../Tk-Icon/tk-icon';
 import '../../../styles/settings/colors.css';
 
-const TkBreadcrum = ({ items }) => {
+const TkBreadcrumb = ({ items }) => {
   return (
     <nav aria-label="breadcrumb">
       <ol className="breadcrumb">
@@ -32,8 +32,8 @@ const TkBreadcrum = ({ items }) => {
   );
 }
 
-TkBreadcrum.propTypes = {
+TkBreadcrumb.propTypes = {
   items: PropTypes.array,
 };
 
-export default TkBreadcrum;
+export default TkBreadcrumb;

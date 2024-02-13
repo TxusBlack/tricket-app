@@ -1,4 +1,7 @@
+@import url('../settings/colors.css');
+
 .card-container{
+    background-color: var(--color-light);
     padding: 2rem;
     width: fit-content;
 }

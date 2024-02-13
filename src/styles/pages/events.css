@@ -1,0 +1,12 @@
+.event {
+    position: relative;
+    z-index: 10;
+    width: 500px;
+}
+
+.event-title {
+    font-size: var(--font-size-xxlarge);
+    font-weight: bold;
+}
+
+

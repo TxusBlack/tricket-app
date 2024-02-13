@@ -5,6 +5,9 @@ import TkSteps from '../../../components/molecules/Tk-Steps/tk-steps';
 import TkTabsGroup from '../../../components/molecules/Tk-Tabs/Tk-Tabs-Group/tk-tabs-group';
 import TkTabs from '../../../components/molecules/Tk-Tabs/Tk-Tab/tk-tabs';
 import TkDropdown from '../../../components/molecules/Tk-Dropdown/tk-dropdown';
+import TkModal from '../../../components/molecules/Tk-Modal/tk-modal';
+import TkButton from '../../../components/atoms/Tk-Button/tk-button';
+import { useState } from 'react';
 
 
 const MoleculesPage = () => {
@@ -46,6 +49,7 @@ const MoleculesPage = () => {
         'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     ];
 
+    const [showModal, setShowModal] = useState(false);
 
     return (
         <>
@@ -98,6 +102,12 @@ const MoleculesPage = () => {
                             })
                         }
                     </TkTabsGroup>
+                </div>
+
+                <div className='my-5'>
+                    <h1 className='font-bold text-3xl mb-3' >Modal</h1>
+                    <TkModal showModal={showModal} setShowModal={setShowModal} />
+                    <TkButton label='Abrir Modal' executeButton={()=> {setShowModal(true)}} />
                 </div>
 
             </div>
