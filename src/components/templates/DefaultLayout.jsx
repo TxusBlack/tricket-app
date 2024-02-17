@@ -1,13 +1,16 @@
-import TkImageHeader from "../atoms/Tk-Image-Header/tk-image-header";
+import TkImageTicket from "../atoms/Tk-Image-Header/tk-image-header";
 import Footer from "../organims/Tk-Footer/Footer";
 
 
-const DefaultLayout = ({ image, topPositionImg, children }) => {
+
+const DefaultLayout = ({ image, children }) => {
   return (
     <div>
-      <div>
+      <div className="default-header">
         <div className="container-header"></div>
-        <TkImageHeader image={image} topPosition={topPositionImg} />
+        <div className="default-image-ticket">
+          <TkImageTicket image={image}/>
+        </div>
       </div>
       <div className="container mx-auto">
         {children}

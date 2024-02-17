@@ -1,12 +1,40 @@
 .event {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px 20px;
+    grid-auto-rows: auto 1fr;
+    grid-template-areas:
+        "Title Title orden"
+        "Boletos Boletos orden"
+        "Boletos Boletos orden";
+
+    margin: 100px auto;
     position: relative;
+    width: 80vw;
     z-index: 10;
-    width: 500px;
+}
+
+.Title {
+    grid-area: Title;
+}
+
+.orden {
+    grid-area: orden;
+}
+
+.Boletos {
+    grid-area: Boletos;
 }
 
 .event-title {
     font-size: var(--font-size-xxlarge);
     font-weight: bold;
+}
+
+.date-events{
+    width: 100%;
+    overflow: auto;
 }
 
 

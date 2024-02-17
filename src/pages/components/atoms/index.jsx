@@ -7,7 +7,8 @@ import TkInput from "../../../components/atoms/Tk-Input/tk-input";
 import TkInputDate from "../../../components/atoms/Tk-Input-Date/tk-input-date";
 import TkInputSelect from "../../../components/atoms/Tk-Input-Select/tk-input-select";
 import TkCardTicket from "../../../components/atoms/Tk-Card-Ticket/tk-card-ticket";
-import TkImageHeader from "../../../components/atoms/Tk-Image-Header/tk-image-header";
+import TkImageTicket from "../../../components/atoms/Tk-Image-Header/tk-image-header";
+import TkDateEvents from "../../../components/molecules/Tk-Date-Events/tk-date-events";
 
 const optionsSelect = [
     { value: '1', label: 'Opcion 1' },
@@ -27,9 +28,9 @@ const plazasOptions = [
 
 const ItemsBreadcrumb = [
     { label: 'Home', url: '/' },
-    { label: 'Components', url: '/components'},
+    { label: 'Components', url: '/components' },
     { label: 'Atoms', url: '/atoms' }
-  ];
+];
 
 const functionIconButton = () => {
     console.log("Execute icon button");
@@ -38,11 +39,11 @@ const functionIconButton = () => {
 const AtomsPage = () => {
     return (
         <div className="container mx-auto px-4" >
-            <div style={{height: '90vh' }} >
+            <div >
                 tricket
             </div>
             <div className="my-5">
-                <TkImageHeader 
+                <TkImageTicket
                     image={'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
                     topPosition={'100px'}
                 />
@@ -155,9 +156,9 @@ const AtomsPage = () => {
 
             <div className="my-5">
                 <h1 className="font-bold text-3xl mb-3">Icon Button</h1>
-                <TkIconButton nameIcon="IoIosArrowForward" colorIcon="#acacac" sizeIcon="2rem" executeButton={functionIconButton()}/>
+                <TkIconButton nameIcon="IoIosArrowForward" colorIcon="#acacac" sizeIcon="2rem" executeButton={functionIconButton()} />
                 <TkIconButton nameIcon="IoIosAddCircle" colorIcon="#acacac" sizeIcon="2rem" executeButton={functionIconButton()} />
-                <TkIconButton nameIcon="IoMdHeart" colorIcon="#acacac" sizeIcon="2rem" executeButton={functionIconButton()}/>
+                <TkIconButton nameIcon="IoMdHeart" colorIcon="#acacac" sizeIcon="2rem" executeButton={functionIconButton()} />
                 <TkIconButton nameIcon="IoIosOptions" colorIcon="#acacac" sizeIcon="2rem" executeButton={functionIconButton()} />
                 <TkIconButton nameIcon="IoIosNotifications" colorIcon="#acacac" sizeIcon="2rem" executeButton={functionIconButton()} />
             </div>
@@ -188,6 +189,11 @@ const AtomsPage = () => {
             <div className="my-5">
                 <h1 className="font-bold text-3xl mb-3">Card Ticket</h1>
                 <TkCardTicket />
+            </div>
+
+            <div className="my-5">
+                <h1 className="font-bold text-3xl mb-3">Date Events</h1>
+                <TkDateEvents />
             </div>
 
         </div>

@@ -10,7 +10,7 @@
     --color-success-hover: #0B610B;
     --color-outline-hover: #acacac;
     --color-outline-success-hover: #0B610B;
-  
+
     /* ACTIVE */
     --color-primary-active: #0062cc;
     --color-success-active: #0B610B;
@@ -22,4 +22,44 @@
     --color-success-disabled: #0B610B;
     --color-outline-disabled: #acacac;
     --color-outline-success-disabled: #0B610B;
+}
+
+.tk-bg-primary {
+    background-color: var(--color-primary);
+}
+
+.tk-bg-light {
+    background-color: var(--color-light);
+}
+
+.tk-bg-success {
+    background-color: var(--color-success);
+}
+
+.tk-bg-outline {
+    background-color: var(--color-outline);
+}
+
+.tk-bg-outline-success {
+    background-color: var(--color-outline-success);
+}
+
+.tk-text-primary {
+    color: var(--color-primary);
+}
+
+.tk-text-light {
+    color: var(--color-light);
+}
+
+.tk-text-success {
+    color: var(--color-success);
+}
+
+.tk-text-outline {
+    color: var(--color-outline);
+}
+
+.tk-text-outline-success {
+    color: var(--color-outline-success);
 }

@@ -1,0 +1,28 @@
+.tk-image-ticket {
+    width: 100%;
+    height: 100%;
+}
+
+.tk-border-ticket {
+    width: 30px;
+    height: 30px;
+    z-index: 3;
+    border-radius: 50%;
+}
+
+.tk-border-ticket__left {
+    left: -15px;
+}
+
+.tk-border-ticket__right {
+    right: -15px;
+}
+
+.tk-image-header {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}

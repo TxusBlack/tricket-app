@@ -18,3 +18,35 @@
     --line-height-xxlarge: 2.4rem;
     --line-height-xxxlarge: 2.7rem;
 }
+
+.tk-fs-small {
+    font-size: var(--font-size-small);
+}
+
+.tk-fs-medium {
+    font-size: var(--font-size-medium);
+}
+
+.tk-fs-large {
+    font-size: var(--font-size-large);
+}
+
+.tk-fs-xlarge {
+    font-size: var(--font-size-xlarge);
+}
+
+.tk-fs-xxlarge {
+    font-size: var(--font-size-xxlarge);
+}
+
+.tk-fs-xxxlarge {
+    font-size: var(--font-size-xxxlarge);
+}
+
+.tk-fs-xxxxlarge {
+    font-size: var(--font-size-xxxxlarge);
+}
+
+.tk-fs-xxxxxlarge {
+    font-size: var(--font-size-xxxxxlarge);
+}

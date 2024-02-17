@@ -1,9 +1,11 @@
 
 
-const TkImageHeader = ({ image, topPosition }) => {
+const TkImageTicket = ({ image }) => {
   return (
-    <img className="tk-image-header" src={image} alt="image header" style={{top: topPosition}} />
+    <div className="tk-image-ticket">      
+      <img className="tk-image-header" src={image} alt="image header"/>
+    </div>
   );
 };
 
-export default TkImageHeader;
+export default TkImageTicket;

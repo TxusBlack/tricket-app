@@ -1,0 +1,10 @@
+@import url('../settings/colors.css');
+
+
+.tk-date-events {
+    cursor: pointer;
+}
+
+.tk-date-events:hover {
+    background-color: var(--color-primary);
+}
