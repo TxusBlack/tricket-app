@@ -7,9 +7,9 @@ const TkInput = ({
     enableIconShowPassword,
 }) => {
     return (
-        <div className="flex flex-col my-4 form-input">
-            <label className="font-semibold">{label}</label>
-            <input className="p-2" type={type} placeholder={placeholder}/>        
+        <div className="flex flex-col my-4">
+            {label && <label className="font-semibold">{label}</label>}            
+            <input className="p-2 tk-input" type={type} placeholder={placeholder}/>        
         </div>
     )
 };

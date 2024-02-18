@@ -37,4 +37,13 @@
     overflow: auto;
 }
 
+.event-buy{
+    margin-top: 20px;
+}
+
+.event-buy--button{
+    width: 80%;
+    margin: 0 auto;
+}
+
 

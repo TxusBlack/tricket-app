@@ -1,13 +1,18 @@
 import TkCard from "../../atoms/Tk-Card/tk-card";
 import TkIcon from "../../atoms/Tk-Icon/tk-icon";
 
+const executeCardAction2 = () => {
+    
+}
+
+
 
 const TkDateEvents = ({
     executeCardAction
 }) => {
     return (
-        <div  className="tk-date-events" onClick={executeCardAction}>
-            <TkCard size="small" >
+        <div className="tk-date-events" onClick={executeCardAction2}  >
+            <TkCard size="xsmall" type="button" >
                 <div className="flex justify-between" >
                     <div>
                         <p className="tk-text-success tk-fs-xlarge font-bold text-center">

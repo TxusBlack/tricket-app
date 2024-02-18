@@ -5,8 +5,10 @@ import TkIconButton from "../../components/atoms/Tk-Icon-Button/tk-icon-button";
 import TkIcon from "../../components/atoms/Tk-Icon/tk-icon";
 import TkListTickets from "../../components/organims/Tk-List-Tickets/tk-list-tickets";
 import DefaultLayout from "../../components/templates/DefaultLayout";
-import WISHImage from '../../assets/images/WISH.svg';
+// import WISHImage from '../../assets/images/WISH.svg';
 import TkDateEvents from "../../components/molecules/Tk-Date-Events/tk-date-events";
+import TkSteps from "../../components/molecules/Tk-Steps/tk-steps";
+import TkLogin from "../../components/templates/tk-login";
 
 
 const titleEvent = 'Wish outdoor 2021';
@@ -66,16 +68,26 @@ const EventsPage = () => {
                     </TkCard>
                 </div>
                 <div className="orden">
-                    <TkCard size="large">
-                        Orden de compra
-                        <TkButton label="Pagar" type="primary" executeButton={() => { }} />
+                    <TkCard size="medium">
+                        <TkSteps/>
+                        
                     </TkCard>
+                    <div className="event-buy">
+                    <TkLogin sizeCard="medium"/>
+                        {/* <TkCard size="medium">
+                            <h4>2. Registrate o incia sesión</h4>
+                            <div className="event-buy--button">
+                                <TkButton label="Pagar" type="success" executeButton={() => { }} />
+                            </div>                   
+                        </TkCard> */}
+                    </div>
                 </div>
                 <div className="Boletos">
                     <TkCard size="large">
                         <TkBreadcrumb items={itemsBreadcrumb} />
                         <hr />
-                        <div className="date-events flex" >
+                        <div className="date-events p-4 flex space-x-4" >
+                            <TkDateEvents/>
                             <TkDateEvents/>
                             <TkDateEvents/>
                             <TkDateEvents/>

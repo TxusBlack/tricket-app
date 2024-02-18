@@ -1,34 +1,15 @@
 
 import PropTypes from 'prop-types';
 
-const getSizeCard = (size) => {
-    let sizeCard = 'w-full';
-    switch (size) {
-        case 'small':
-            sizeCard = 'w-1/4';
-            break;
-        case 'medium':
-            sizeCard = 'w-1/2';
-            break;
-        case 'large':
-            sizeCard = 'w-3/4';
-            break;
-        default:
-            sizeCard = 'w-full';
-            break;
-    }
-
-    return sizeCard;
-};
 
 const TkCard = ({
     size,
+    type,
     children
 }) => {
-    const sizeCard = getSizeCard(size);
 
     return (
-        <div className={`shadow-lg my-4 rounded-xl card-container card-${size} ${sizeCard}`} >
+        <div className={`shadow-lg rounded-xl card-container card-${size} card-${type} `} >
             <div>{children}</div>
         </div>
     )
@@ -36,6 +17,7 @@ const TkCard = ({
 
 TkCard.propTypes = {
     size: PropTypes.string.isRequired,
+    type: PropTypes.string,
     children: PropTypes.node.isRequired,
 };
 

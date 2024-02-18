@@ -3,7 +3,7 @@
 .tk-button {
   display: inline-flex;
   align-items: center;
-  width: fit-content;
+  width: 100%;
   border-radius: 12px;
 }
 
@@ -122,16 +122,35 @@
 .tk-button__small {
   font-size: 0.8rem;
   padding: 0.3rem 1rem;
+  border-radius: 12px;
 }
 
 .tk-button__default {
   font-size: 1rem;
-  padding: 0.5rem 1.2rem;  
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
 }
 
 .tk-button__puffy {
   font-size: 1.2rem;
   padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+}
+
+.tk-button-label {
+  margin: 0 auto;
+}
+
+.tk-button-label__small {
+  font-size: 0.8rem;
+}
+
+.tk-button-label__default {
+  font-size: 1rem;
+}
+
+.tk-button-label__puffy {
+  font-size: 1.2rem;
 }
 
 

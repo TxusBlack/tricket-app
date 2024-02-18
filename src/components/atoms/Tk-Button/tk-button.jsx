@@ -16,7 +16,7 @@ const TkButton = ({
             {
                 isShowIcon && <TkIcon className={`${size}`} iconName={nameIcon} />
             }
-            <span className={`tk-button-label__${size}`}>{label}</span>
+            <span className={`tk-button-label tk-button-label__${size}`}>{label}</span>
         </button>
     )
 }

@@ -5,14 +5,32 @@
     width: fit-content;
 }
 
+.card-xsmall {
+    padding: 1rem;
+    width: 170px;
+}
+
 .card-small {
     padding: 1rem;
+    width: 200px;
 }
 
 .card-medium {
     padding: 1.5rem;
+    width: 400px;
 }
 
 .card-large {
     padding: 2rem;
+    width: 650px;
 }
+
+.card-button:hover {
+    outline: 2px solid var(--color-primary);
+}
+
+.card-button:focus, .card-button:focus p {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+
