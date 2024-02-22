@@ -14,7 +14,7 @@ const TkButton = ({
             className={`tk-button tk-button--${type} tk-button__${size} mx-2 font-bold`}
             onClick={executeButton}>
             {
-                isShowIcon && <TkIcon className={`${size}`} iconName={nameIcon} />
+                isShowIcon && <TkIcon className={`${size}`} iconName={nameIcon} color={'outline'} />
             }
             <span className={`tk-button-label tk-button-label__${size}`}>{label}</span>
         </button>

@@ -39,9 +39,6 @@ const functionIconButton = () => {
 const AtomsPage = () => {
     return (
         <div className="container mx-auto px-4" >
-            <div >
-                tricket
-            </div>
             <div className="my-5">
                 <TkImageTicket
                     image={'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
@@ -80,8 +77,8 @@ const AtomsPage = () => {
             </div>
 
             <div className="my-5">
-                <h1 className="font-bold text-3xl mb-3">Card</h1>
-                <TkCard size="small">
+                <h1 className="font-bold text-3xl my-3">Card Medium</h1>
+                <TkCard size="medium">
                     <div>
                         <h1 className="text-3xl font-semibold my-4">Card Title</h1>
                         <p>
@@ -102,7 +99,8 @@ const AtomsPage = () => {
                         </div>
                     </div>
                 </TkCard>
-                <TkCard size="medium">
+                <h1 className="font-bold text-3xl my-3">Card Large</h1>
+                <TkCard size="large">
                     <div>
                         <h1 className="text-3xl font-semibold my-4">Info evento</h1>
                         <p>
@@ -127,6 +125,7 @@ const AtomsPage = () => {
 
                     </div>
                 </TkCard>
+                <h1 className="font-bold text-3xl my-3">Card Formulario</h1>
                 <TkCard size="large">
                     <div>
                         <h1 className="text-3xl font-semibold my-4">Formulario</h1>
@@ -143,29 +142,29 @@ const AtomsPage = () => {
             <div className="my-5">
                 <h1 className="font-bold text-3xl mb-3">Icon</h1>
                 <div className="flex my-5">
-                    <TkIcon className="mx-3" iconName="IoIosArrowForward" size="1em" color="#acacac" />
-                    <TkIcon className="mx-3" iconName="IoIosAddCircle" size="1.5em" color="#007bff" />
-                    <TkIcon className="mx-3" iconName="IoMdHeart" size="2em" color="#088A08" />
+                    <TkIcon className="mx-3" iconName="IoIosArrowForward" size="small" color="primary" />
+                    <TkIcon className="mx-3" iconName="IoIosAddCircle" size="medium" color="outline" />
+                    <TkIcon className="mx-3" iconName="IoMdHeart" size="large" color="success" />
                 </div>
                 <div className="flex my-5">
-                    <TkIcon className="mx-3" iconName="IoIosOptions" size="1rem" color="#acacac" />
-                    <TkIcon className="mx-3" iconName="IoIosNotifications" size="1.5rem" color="#007bff" />
-                    <TkIcon className="mx-3" iconName="IoIosCloseCircle" size="2rem" color="#088A08" />
+                    <TkIcon className="mx-3" iconName="IoIosOptions" size="small" color="success" />
+                    <TkIcon className="mx-3" iconName="IoIosNotifications" size="medium" color="outline" />
+                    <TkIcon className="mx-3" iconName="IoIosCloseCircle" size="large" color="primary" />
                 </div>
             </div>
 
             <div className="my-5">
                 <h1 className="font-bold text-3xl mb-3">Icon Button</h1>
-                <TkIconButton nameIcon="IoIosArrowForward" colorIcon="#acacac" sizeIcon="2rem" executeButton={functionIconButton()} />
-                <TkIconButton nameIcon="IoIosAddCircle" colorIcon="#acacac" sizeIcon="2rem" executeButton={functionIconButton()} />
-                <TkIconButton nameIcon="IoMdHeart" colorIcon="#acacac" sizeIcon="2rem" executeButton={functionIconButton()} />
-                <TkIconButton nameIcon="IoIosOptions" colorIcon="#acacac" sizeIcon="2rem" executeButton={functionIconButton()} />
-                <TkIconButton nameIcon="IoIosNotifications" colorIcon="#acacac" sizeIcon="2rem" executeButton={functionIconButton()} />
+                <TkIconButton nameIcon="IoIosArrowForward" colorIcon="outline" sizeIcon="large" executeButton={functionIconButton()} />
+                <TkIconButton nameIcon="IoIosAddCircle" colorIcon="primary" sizeIcon="large" executeButton={functionIconButton()} />
+                <TkIconButton nameIcon="IoMdHeart" colorIcon="success" sizeIcon="large" executeButton={functionIconButton()} />
+                <TkIconButton nameIcon="IoIosOptions" colorIcon="outline" sizeIcon="large" executeButton={functionIconButton()} />
+                <TkIconButton nameIcon="IoIosNotifications" colorIcon="primary" sizeIcon="large" executeButton={functionIconButton()} />
             </div>
 
             <div className="my-5">
                 <h1 className="font-bold text-3xl mb-3">Input</h1>
-                <TkInput label={'Nombre'} placeholder={'Escriba su nombre'} type={'text'} />
+                <TkInput label={'Nombre'} placeholder={'Escriba su nombre'} type={'text'} iconInput={'IoIosPerson'} />
                 <TkInput label={'Password'} placeholder={'Escriba el password'} type={'password'} />
                 <TkInput label={'Email'} placeholder={'Escriba el email'} type={'email'} />
                 <TkInput label={'Phone'} placeholder={'Escriba su telefono'} type={'phone'} />

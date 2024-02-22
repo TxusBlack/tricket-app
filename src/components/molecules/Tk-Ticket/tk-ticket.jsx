@@ -23,7 +23,7 @@ const TkTicket = ({
                         <p className='tk-ticket__position__row'>Fila {rowPosition}</p>
                     </div>
                     <div className='flex items-center' >
-                        <TkIcon iconName={nameIcon} size={'2rem'} color={getComputedStyle(document.documentElement).getPropertyValue('--color-outline')} />
+                        <TkIcon iconName={nameIcon} size={'large'} color={'outline'} />
                     </div>
                 </div>
             </TkCardTicket>    

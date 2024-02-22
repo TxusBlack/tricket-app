@@ -10,7 +10,7 @@
     --font-size-xxxxxlarge: 5rem;
 
     /* LINE-HEIGHT */
-    --line-height-xsmall: 0.9rem;
+    --line-height-xsmall: 0.8rem;
     --line-height-small: 1.2rem;
     --line-height-medium: 1.5rem;
     --line-height-large: 1.8rem;
@@ -49,4 +49,24 @@
 
 .tk-fs-xxxxxlarge {
     font-size: var(--font-size-xxxxxlarge);
+}
+
+.tk-lh-xsmall {
+    line-height: var(--line-height-xsmall);
+}
+
+.tk-lh-small {
+    line-height: var(--line-height-small);
+}
+
+.tk-lh-medium {
+    line-height: var(--line-height-medium);
+}
+
+.tk-lh-large {
+    line-height: var(--line-height-large);
+}
+
+.tk-lh-xlarge {
+    line-height: var(--line-height-xlarge);
 }

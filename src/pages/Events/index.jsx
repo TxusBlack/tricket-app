@@ -20,7 +20,20 @@ const priceLabel = 'Boletos desde';
 const priceEvent = '$1000 MXN';
 const imageHeader = 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
-
+const itemsSteps = [
+ {
+    icon: 'IoMdPerson',
+    label: '1. Registrate o incia sesión',
+ },
+ {
+    icon: 'IoMdCart',
+    label: '2. Realiza la orden',
+ },
+ {
+    icon: 'IoMdCard',
+    label: '3. Confirma tus datos',
+ },
+];
 
 const itemsBreadcrumb = [
     { label: 'Fecha', url: '' },
@@ -37,7 +50,7 @@ const EventsPage = () => {
                             <div>
                                 <h1 className="event-title pb-5" >{titleEvent}</h1>
                                 <div className="flex py-3" >
-                                    <TkIcon iconName="IoIosPin" />
+                                    <TkIcon iconName="IoIosPin" color={'outline'} />
                                     <div className="ml-6" >
                                         <h3 className="font-bold event-title__data" >{placeEvent}</h3>
                                         <p>{addressEvent}</p>
@@ -45,7 +58,7 @@ const EventsPage = () => {
                                 </div>
 
                                 <div className="flex py-3" >
-                                    <TkIcon iconName="IoIosCalendar" />
+                                    <TkIcon iconName="IoIosCalendar" color={'outline'} />
                                     <div className="ml-6">
                                         <h3 className="font-bold" >{dateLabel}</h3>
                                         <p>{dateEvent}</p>
@@ -53,7 +66,7 @@ const EventsPage = () => {
                                 </div>
 
                                 <div className="flex py-3">
-                                    <TkIcon iconName="IoIosTime" />
+                                    <TkIcon iconName="IoIosTime" color={'outline'} />
                                     <div className="flex ml-6">
                                         <h3>{priceLabel}</h3>
                                         <p>{priceEvent}</p>
@@ -61,15 +74,15 @@ const EventsPage = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col justify-between" >
-                                <TkIconButton nameIcon="IoIosHeartEmpty" />
-                                <TkIconButton nameIcon="IoMdShare" />
+                                <TkIconButton nameIcon="IoIosHeartEmpty" colorIcon={'outline'} />
+                                <TkIconButton nameIcon="IoMdShare" colorIcon={'outline'} />
                             </div>
                         </div>
                     </TkCard>
                 </div>
                 <div className="orden">
                     <TkCard size="medium">
-                        <TkSteps/>
+                        <TkSteps ArraySteps={itemsSteps}/>
                         
                     </TkCard>
                     <div className="event-buy">

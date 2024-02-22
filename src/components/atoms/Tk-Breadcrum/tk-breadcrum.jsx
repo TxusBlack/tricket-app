@@ -19,8 +19,8 @@ const TkBreadcrumb = ({ items }) => {
             { index < items.length - 1 &&
               <TkIcon 
                 iconName='IoIosArrowForward' 
-                size='1.5rem' 
-                color="getComputedStyle(document.documentElement).getPropertyValue('--color-outline')" 
+                size='medium' 
+                color="outline" 
                 className='breadcrumb-icon'
               />     
             }

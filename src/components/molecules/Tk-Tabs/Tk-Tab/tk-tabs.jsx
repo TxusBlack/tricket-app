@@ -18,7 +18,7 @@ const TkTabs = ({ labelTab, indexTab, classTabContent, children }) => {
                         {labelTab}
                     </button>
                 </div>
-                <TkIconButton nameIcon="IoIosOptions" colorIcon="#acacac" sizeIcon="2rem" executeButton={console.log('execute icon button')} />
+                <TkIconButton nameIcon="IoIosOptions" colorIcon="outline" sizeIcon="large" executeButton={console.log('execute icon button')} />
             </div>
             <div className="index === activeTab ? 'active tab-content' : 'tab-content' ">
                 <div className={`tab-content ${classTabContent} `}>

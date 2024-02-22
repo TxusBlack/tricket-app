@@ -5,11 +5,51 @@ import * as allIcons from 'react-icons/io';
 
 const TkIcon = ({
     iconName,
-    size='1.5rem',
+    size,
     color,
     className
 }) => {
     const SelectedIcon = allIcons[iconName];
+    const getSize = (size) => {
+        let sizeIcon = '1rem';
+        switch (size) {
+            case 'small':
+                sizeIcon = '1rem';
+                break;
+            case 'medium':
+                sizeIcon = '1.5rem';
+                break;
+            case 'large':
+                sizeIcon = '2rem';
+                break;
+            default:
+                sizeIcon = '1rem';
+                break
+        }
+
+        return sizeIcon;
+    };
+
+    const getColor = (color) => {
+        let colorIcon = '--color-primary';
+
+        switch (color) {
+            case 'primary':
+                colorIcon = '--color-primary';
+                break;
+            case 'success':
+                colorIcon = '--color-success'
+                break;
+            case 'outline':
+                colorIcon = '--color-outline';
+                break;
+
+            default:
+                break;
+        }
+
+        return getComputedStyle(document.documentElement).getPropertyValue(colorIcon);
+    };
 
     if (!SelectedIcon) {
         console.error(`Icon "${iconName}" not found`);
@@ -18,7 +58,7 @@ const TkIcon = ({
 
     return (
         <div>
-            <IconContext.Provider value={{ color, size, className }}>
+            <IconContext.Provider value={{ color: getColor(color), size: getSize(size), className }}>
                 <SelectedIcon />
             </IconContext.Provider>
         </div>

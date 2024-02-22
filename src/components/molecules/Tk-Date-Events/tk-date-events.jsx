@@ -25,11 +25,11 @@ const TkDateEvents = ({
                     </div>
                     <div>
                         <div className="flex items-center">
-                            <TkIcon iconName={'IoIosCalendar'} size="1rem" />
+                            <TkIcon iconName={'IoIosCalendar'} size="small" color={'outline'} />
                             <p className="ms-2">Viernes</p>
                         </div>
                         <div className="flex items-center">
-                            <TkIcon iconName={'IoMdTime'} size="1rem" />
+                            <TkIcon iconName={'IoMdTime'} size="small" color={'outline'} />
                             <p className="ms-2">14:00 hs.</p>
                         </div>
                         
