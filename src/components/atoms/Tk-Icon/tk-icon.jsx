@@ -66,7 +66,7 @@ const TkIcon = ({
 }
 
 TkIcon.propTypes = {
-    nameIcon: PropTypes.string.isRequired
+    iconName: PropTypes.string.isRequired
 };
 
 export default TkIcon

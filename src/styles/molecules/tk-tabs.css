@@ -29,3 +29,18 @@
     border-radius: 2px;
     color: black;
 }
+
+.tab-list {
+    display: flex;
+    justify-content: start;
+}
+
+.tab-active {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tab-inactive {
+    display: none;
+}

@@ -30,9 +30,9 @@ const TkLogin = ({
 
                 {!hasAccount && <div>
                     <form>
-                        <TkInput placeholder="Nombre" iconInput={'IoIosPerson'} />
-                        <TkInput placeholder="E-mail" iconInput={'IoIosMail'} />
-                        <TkInput placeholder="Contraseña" iconInput={'IoIosLock'} />
+                        <TkInput type="text" placeholder="Nombre" iconInput={'IoIosPerson'} />
+                        <TkInput type="email" placeholder="E-mail" iconInput={'IoIosMail'} />
+                        <TkInput type="password" placeholder="Contraseña" iconInput={'IoIosLock'} />
                     </form>
                     
                     <div className="flex justify-center my-4" >
@@ -45,8 +45,8 @@ const TkLogin = ({
 
                 {hasAccount && <div>
                     <form>                        
-                        <TkInput placeholder="E-mail" iconInput={'IoIosMail'} />
-                        <TkInput placeholder="Contraseña" iconInput={'IoIosLock'} />
+                        <TkInput type="text" placeholder="E-mail" iconInput={'IoIosMail'} />
+                        <TkInput type="password" placeholder="Contraseña" iconInput={'IoIosLock'} />
                     </form>
                     
                     <div className="flex justify-center my-4" >

@@ -14,12 +14,16 @@ const TkCardTicket = ({
     setHovered(false);
     };
 
+    const clickCardTicket = () => {
+        executeCardTicket()
+    };
+
     return (
         <div 
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave} 
         className="card-ticket" 
-        onClick={executeCardTicket} >
+        onClick={clickCardTicket} >
             <div className="card-ticket__form__up" 
                 style={{borderColor: hovered ? '#007bff' : '#acacac'}}>
             </div>
@@ -37,8 +41,8 @@ const TkCardTicket = ({
 
 
 TkCardTicket.propTypes = {
-    executeCardTicket: PropTypes.func.isRequired,
-    children: PropTypes.node.isRequired,
+    executeCardTicket: PropTypes.func,
+    children: PropTypes.node,
 };
 
 export default TkCardTicket;

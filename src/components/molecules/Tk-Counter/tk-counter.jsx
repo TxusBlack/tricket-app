@@ -23,6 +23,7 @@ const TkCounter = () => {
                 type="outline"
                 executeButton={decrementar}
                 size={'small'}
+                label="-Menos"
             />
             <span className="contador-value">{count}</span>
             <TkButton

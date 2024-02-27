@@ -25,6 +25,11 @@
     width: 650px;
 }
 
+.card-auto {
+    padding: 1rem;
+    width: 100%;
+}
+
 .card-button:hover {
     outline: 2px solid var(--color-primary);
 }

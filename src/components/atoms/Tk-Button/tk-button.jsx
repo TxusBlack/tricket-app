@@ -25,9 +25,9 @@ TkButton.propTypes = {
     isShowIcon: PropTypes.bool,
     nameIcon: PropTypes.string,
     label: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
+    type: PropTypes.string,
     size: PropTypes.string,
-    executeButton: PropTypes.func.isRequired,
+    executeButton: PropTypes.func,
 };
 
 

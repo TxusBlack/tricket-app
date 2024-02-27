@@ -20,8 +20,7 @@ const TkInputSelect = ({
 TkInputSelect.propTypes = {
     label: PropTypes.string.isRequired,
     options: PropTypes.array.isRequired,
-    value: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
+    onChange: PropTypes.func,
 };
 
 export default TkInputSelect;

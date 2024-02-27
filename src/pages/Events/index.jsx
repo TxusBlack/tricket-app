@@ -1,5 +1,5 @@
 import TkBreadcrumb from "../../components/atoms/Tk-Breadcrum/tk-breadcrum";
-import TkButton from "../../components/atoms/Tk-Button/tk-button";
+// import TkButton from "../../components/atoms/Tk-Button/tk-button";
 import TkCard from "../../components/atoms/Tk-Card/tk-card";
 import TkIconButton from "../../components/atoms/Tk-Icon-Button/tk-icon-button";
 import TkIcon from "../../components/atoms/Tk-Icon/tk-icon";
@@ -40,12 +40,104 @@ const itemsBreadcrumb = [
     { label: 'Entradas', url: '' },
 ];
 
+const listTickets = [
+    {
+        value: 1600,
+        currency: 'MXN',
+        section: 'General',
+        row: 'A',
+    },
+    {
+        value: 1600,
+        currency: 'MXN',
+        section: 'General',
+        row: 'A',
+    },
+    {
+        value: 1600,
+        currency: 'MXN',
+        section: 'General',
+        row: 'A',
+    },
+    {
+        value: 1600,
+        currency: 'MXN',
+        section: 'General',
+        row: 'A',
+    },
+    {
+        value: 1600,
+        currency: 'MXN',
+        section: 'General',
+        row: 'A',
+    },
+    {
+        value: 1600,
+        currency: 'MXN',
+        section: 'General',
+        row: 'A',
+    },
+    {
+        value: 1600,
+        currency: 'MXN',
+        section: 'General',
+        row: 'A',
+    }
+
+];
+
+const BetterListTickets = [
+    {
+        value: 800,
+        currency: 'MXN',
+        section: 'v.i.p',
+        row: 'A',
+    },
+    {
+        value: 800,
+        currency: 'MXN',
+        section: 'v.i.p',
+        row: 'A',
+    },
+    {
+        value: 800,
+        currency: 'MXN',
+        section: 'v.i.p',
+        row: 'A',
+    },
+    {
+        value: 800,
+        currency: 'MXN',
+        section: 'v.i.p',
+        row: 'A',
+    },
+    {
+        value: 800,
+        currency: 'MXN',
+        section: 'v.i.p',
+        row: 'A',
+    },
+    {
+        value: 800,
+        currency: 'MXN',
+        section: 'v.i.p',
+        row: 'A',
+    },
+    {
+        value: 800,
+        currency: 'MXN',
+        section: 'v.i.p',
+        row: 'A',
+    }
+
+];
+
 const EventsPage = () => {
     return (
         <DefaultLayout image={imageHeader}>
             <div className="event">
                 <div className="Title">
-                    <TkCard size="large">
+                    <TkCard size="auto">
                         <div className="flex justify-between">
                             <div>
                                 <h1 className="event-title pb-5" >{titleEvent}</h1>
@@ -81,7 +173,7 @@ const EventsPage = () => {
                     </TkCard>
                 </div>
                 <div className="orden">
-                    <TkCard size="medium">
+                    <TkCard size="auto">
                         <TkSteps ArraySteps={itemsSteps}/>
                         
                     </TkCard>
@@ -96,10 +188,10 @@ const EventsPage = () => {
                     </div>
                 </div>
                 <div className="Boletos">
-                    <TkCard size="large">
+                    <TkCard size="auto">
                         <TkBreadcrumb items={itemsBreadcrumb} />
                         <hr />
-                        <div className="date-events p-4 flex space-x-4" >
+                        <div className="date-events p-4 my-2 flex space-x-4" >
                             <TkDateEvents/>
                             <TkDateEvents/>
                             <TkDateEvents/>
@@ -107,7 +199,9 @@ const EventsPage = () => {
                             <TkDateEvents/>
                         </div>
                         <hr />
-                        <TkListTickets listTickets={[]} BetterListTickets={[]} />
+                        <div className="mt-4">
+                            <TkListTickets listTickets={listTickets} BetterListTickets={BetterListTickets}/>
+                        </div>
                     </TkCard>
 
                 </div>
