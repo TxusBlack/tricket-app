@@ -1,7 +1,7 @@
 import TkTabs from "../Tk-Tab/tk-tabs";
 
 
-const TkTabList = ({ tabsInfo, setTabActive }) => {
+const TkTabList = ({ tabsInfo, setTabActive, indexActiveTab }) => {
     const handleClickTab = (tabActive) => {
         setTabActive(tabActive)
     }
@@ -15,7 +15,9 @@ const TkTabList = ({ tabsInfo, setTabActive }) => {
                             key={index}
                             labelTab={tab}
                             indexTab={index}
-                            sendActiveTab={handleClickTab}>
+                            sendActiveTab={handleClickTab}
+                            indexActiveTab={indexActiveTab}
+                            >
                         </TkTabs>
                     )
                 })

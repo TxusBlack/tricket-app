@@ -4,6 +4,10 @@
     display: flex;
 }
 
+.breadcrumb-items {
+    display: flex;
+}
+
 .breadcrumb-item{
     display: flex;
     align-items: center;

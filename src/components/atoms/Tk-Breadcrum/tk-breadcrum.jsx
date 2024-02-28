@@ -7,7 +7,7 @@ const TkBreadcrumb = ({ items }) => {
     <nav aria-label="breadcrumb">
       <ol className="breadcrumb">
         {items.map((item, index) => (
-          <div key={index}>
+          <div key={index}  className='breadcrumb-items'>
             <li className={`breadcrumb-item ${index === items.length - 1 ? ' active' : ''}`}>
               {index === items.length - 1 ? (
                 <span>{item.label}</span>

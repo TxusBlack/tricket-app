@@ -1,16 +1,12 @@
-import { useState } from 'react';
 
-const TkTabs = ({ labelTab, indexTab, sendActiveTab }) => {
-    const [activeTab, setActiveTab] = useState(0);
-
+const TkTabs = ({ labelTab, indexTab, sendActiveTab, indexActiveTab }) => {
     const handleTabClick = (index) => {
-        setActiveTab(index);
         sendActiveTab(index);
     };
     return (
         <div className="tab-buttons py-3">
             <button
-                className={indexTab === activeTab ? 'active tab-button' : 'tab-button'}
+                className={indexTab === indexActiveTab ? 'active tab-button' : 'tab-button'}
                 onClick={() => handleTabClick(indexTab)}
             >
                 {labelTab}

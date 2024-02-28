@@ -1,5 +1,9 @@
 @import url('../settings/colors.css');
 
+.tk-steps {
+    display: flex;
+}
+
 .tk-steps-step {
     max-width: 80px;
 }
@@ -7,6 +11,6 @@
 .tk-steps-line {
     border: none;
     border-top: 3px solid var(--color-success);
-    width: 100%;
+    width: 50px;
     margin: auto;
 }

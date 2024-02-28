@@ -33,6 +33,7 @@
 .tab-list {
     display: flex;
     justify-content: start;
+    margin-bottom: 2rem;
 }
 
 .tab-active {

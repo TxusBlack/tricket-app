@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import TkTabsGroup from '../../molecules/Tk-Tabs/Tk-Tabs-Group/tk-tabs-group';
-import TkTabs from "../../molecules/Tk-Tabs/Tk-Tab/tk-tabs";
 import TkTicket from "../../molecules/Tk-Ticket/tk-ticket";
 import TkTabList from '../../molecules/Tk-Tabs/TkTabList/tk-tab-list';
 import TkTabContent from '../../molecules/Tk-Tabs/Tk-Tab-Content/tk-tab-content';
@@ -22,7 +21,7 @@ const TkListTickets = ({
     return (
         <div>
             <TkTabsGroup>
-                <TkTabList tabsInfo={tabsInfo} setTabActive={handleCallbackTab} />
+                <TkTabList tabsInfo={tabsInfo} setTabActive={handleCallbackTab} indexActiveTab = {activeTab} />
                 <TkTabContent isActiveTab={activeTab === 0}>
                     {listTickets.map((ticket, index) => {
                         return (
