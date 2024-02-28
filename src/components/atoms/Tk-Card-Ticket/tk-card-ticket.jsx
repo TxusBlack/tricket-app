@@ -6,6 +6,7 @@ const TkCardTicket = ({
     children
 }) => {
     const [hovered, setHovered] = useState(false);
+    const [clicked, setClicked] = useState(false);
     const handleMouseEnter = () => {
         setHovered(true);
       };
@@ -15,7 +16,8 @@ const TkCardTicket = ({
     };
 
     const clickCardTicket = () => {
-        executeCardTicket()
+        setClicked(!clicked);
+        executeCardTicket();
     };
 
     return (
@@ -30,7 +32,10 @@ const TkCardTicket = ({
             <div className="card-ticket__form__down" 
                 style={{borderColor: hovered ? '#007bff' : '#acacac'}}>
             </div>
-            <div className="card-ticket__content">
+            <div className="card-ticket__content" style={{
+                backgroundColor: clicked ? '#5F47F6': '',
+                color: clicked ? 'white': ''
+            }} >
                 {children}
             </div>
             

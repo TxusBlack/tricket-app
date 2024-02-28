@@ -26,7 +26,7 @@ const TkLogin = ({
         <div>
             <TkCard size={sizeCard}>
                     <h3 className="font-bold tk-fs-large" >{labelLogin}</h3>
-                    <h3 className="tk-fs-large tk-text-outline my-4" >Wish Outdoor 2021</h3>
+                    <h3 className="tk-fs-large my-4" >Wish Outdoor 2021</h3>
 
                 {!hasAccount && <div>
                     <form>

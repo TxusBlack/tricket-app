@@ -5,7 +5,7 @@ import TkIconButton from "../../components/atoms/Tk-Icon-Button/tk-icon-button";
 import TkIcon from "../../components/atoms/Tk-Icon/tk-icon";
 import TkListTickets from "../../components/organims/Tk-List-Tickets/tk-list-tickets";
 import DefaultLayout from "../../components/templates/DefaultLayout";
-// import WISHImage from '../../assets/images/WISH.svg';
+import WISHImage from '../../assets/images/WISH.svg';
 import TkDateEvents from "../../components/molecules/Tk-Date-Events/tk-date-events";
 import TkSteps from "../../components/molecules/Tk-Steps/tk-steps";
 import TkLogin from "../../components/templates/tk-login";
@@ -134,7 +134,7 @@ const BetterListTickets = [
 
 const EventsPage = () => {
     return (
-        <DefaultLayout image={imageHeader}>
+        <DefaultLayout image={WISHImage}>
             <div className="event">
                 <div className="Title">
                     <TkCard size="auto">
@@ -142,7 +142,7 @@ const EventsPage = () => {
                             <div>
                                 <h1 className="event-title pb-5" >{titleEvent}</h1>
                                 <div className="flex py-3" >
-                                    <TkIcon iconName="IoIosPin" color={'outline'} />
+                                    <TkIcon iconName="IoIosPin" color={'outline'} size={'medium'} />
                                     <div className="ml-6" >
                                         <h3 className="font-bold event-title__data" >{placeEvent}</h3>
                                         <p>{addressEvent}</p>
@@ -150,7 +150,7 @@ const EventsPage = () => {
                                 </div>
 
                                 <div className="flex py-3" >
-                                    <TkIcon iconName="IoIosCalendar" color={'outline'} />
+                                    <TkIcon iconName="IoIosCalendar" color={'outline'} size={'medium'} />
                                     <div className="ml-6">
                                         <h3 className="font-bold" >{dateLabel}</h3>
                                         <p>{dateEvent}</p>
@@ -158,7 +158,7 @@ const EventsPage = () => {
                                 </div>
 
                                 <div className="flex py-3">
-                                    <TkIcon iconName="IoIosTime" color={'outline'} />
+                                    <TkIcon iconName="IoIosTime" color={'outline'} size={'medium'} />
                                     <div className="flex ml-6">
                                         <h3>{priceLabel}</h3>
                                         <p>{priceEvent}</p>
@@ -166,8 +166,8 @@ const EventsPage = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col justify-between" >
-                                <TkIconButton nameIcon="IoIosHeartEmpty" colorIcon={'outline'} />
-                                <TkIconButton nameIcon="IoMdShare" colorIcon={'outline'} />
+                                <TkIconButton nameIcon="IoIosHeartEmpty" colorIcon={'outline'} sizeIcon={'large'} />
+                                <TkIconButton nameIcon="IoMdShare" colorIcon={'outline'} sizeIcon={'large'} />
                             </div>
                         </div>
                     </TkCard>

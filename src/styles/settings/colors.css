@@ -1,65 +1,104 @@
 :root {
-    --color-primary: #007bff;
     --color-light: #fff;
-    --color-success: #088A08;
-    --color-outline: #acacac;
-    --color-outline-success: #088A08;
+    --color-primary: #5F47F6;
+    --color-success: #5CB89D;
+    --color-outline: #808285;
+    
 
     /* HOVER */
-    --color-primary-hover: #0069d9;
-    --color-success-hover: #0B610B;
-    --color-outline-hover: #acacac;
-    --color-outline-success-hover: #0B610B;
+    --color-light-hover: #f1f2f2;
+    --color-primary-hover: #4D36E2;
+    --color-success-hover: #40A587;
+    --color-outline-hover: #808285;
 
     /* ACTIVE */
+    /* FALTA DEFINIR ESTOS COLORES DEL ESTADO */
+    --color-light-active: #f1f2f2;
     --color-primary-active: #0062cc;
     --color-success-active: #0B610B;
-    --color-outline-active: #acacac;
-    --color-outline-success-active: #0B610B;
+    --color-outline-active: #808285;
 
     /* DISABLED */
-    --color-primary-disabled: #007bff;
-    --color-success-disabled: #0B610B;
-    --color-outline-disabled: #acacac;
-    --color-outline-success-disabled: #0B610B;
-}
+    --color-light-disabled: #808285;
+    --color-primary-disabled: #D1D3D4;
+    --color-success-disabled: #D1D3D4;
+    --color-outline-disabled: #808285;
 
-.tk-bg-primary {
-    background-color: var(--color-primary);
 }
 
 .tk-bg-light {
     background-color: var(--color-light);
 }
 
+.tk-bg-primary {
+    background-color: var(--color-primary);
+}
+
 .tk-bg-success {
     background-color: var(--color-success);
-}
-
-.tk-bg-outline {
-    background-color: var(--color-outline);
-}
-
-.tk-bg-outline-success {
-    background-color: var(--color-outline-success);
-}
-
-.tk-text-primary {
-    color: var(--color-primary);
 }
 
 .tk-text-light {
     color: var(--color-light);
 }
 
+.tk-text-primary {
+    color: var(--color-primary);
+}
+
 .tk-text-success {
     color: var(--color-success);
 }
 
-.tk-text-outline {
-    color: var(--color-outline);
+.tk-border-light {
+    border-color: var(--color-light);
 }
 
-.tk-text-outline-success {
-    color: var(--color-outline-success);
+.tk-border-primary {
+    border-color: var(--color-primary);
 }
+
+.tk-border-success {
+    border-color: var(--color-success);
+}
+
+/* HOVER */
+.tk-bg-light:hover {
+    background-color: var(--color-light-hover);
+}
+
+.tk-bg-primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.tk-bg-success:hover {
+    background-color: var(--color-success-hover);
+}
+
+/* ACTIVE */
+
+.tk-bg-light:active {
+    background-color: var(--color-light-active);
+}
+
+.tk-bg-primary:active {
+    background-color: var(--color-primary-active);
+}
+
+.tk-bg-success:active {
+    background-color: var(--color-success-active);
+}
+
+/* DISABLED */
+.tk-bg-light:disabled {
+    background-color: var(--color-light-disabled);
+}
+
+.tk-bg-primary:disabled {
+    background-color: var(--color-primary-disabled);
+}
+
+.tk-bg-success:disabled {
+    background-color: var(--color-success-disabled);
+}
+

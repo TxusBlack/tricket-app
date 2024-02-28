@@ -6,7 +6,6 @@
 }
 
 .tk-ticket__price{
-    color: var(--color-primary);
     font-size: var(--font-size-xlarge);
     font-weight: bold;
     height: 100%;
@@ -21,8 +20,4 @@
     text-align: left;
     flex: 1;
     box-sizing: border-box;
-}
-
-.tk-ticket__position__row{
-    color: var(--color-outline);
 }
