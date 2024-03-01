@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import TkCardTicket from '../../atoms/Tk-Card-Ticket/tk-card-ticket';
 import TkIcon from '../../atoms/Tk-Icon/tk-icon';
 import '../../../styles/settings/colors.css';
+import { useState } from 'react';
 
 const TkTicket = ({
     price,
@@ -11,8 +12,10 @@ const TkTicket = ({
     nameIcon
 }) => {
 
-    const handleClickCardTicket = () => {
-        console.log('Ticket clicked');
+    const [selectTicket, setSelectTicket] = useState(false);
+
+    const handleClickCardTicket = (clickedTicket) => {
+        setSelectTicket(clickedTicket);
     };
 
 
@@ -28,7 +31,7 @@ const TkTicket = ({
                     <p className='tk-ticket__position__row'>Fila {rowPosition}</p>
                 </div>
                 <div className='flex items-center' >
-                    <TkIcon iconName={nameIcon} size={'large'} color={'outline'} />
+                    <TkIcon iconName={nameIcon} size={'large'} color={selectTicket ? 'light':'outline'} />
                 </div>
             </div>
         </TkCardTicket>

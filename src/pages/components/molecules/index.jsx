@@ -39,7 +39,6 @@ const MoleculesPage = () => {
     const [activeTab, setActiveTab] = useState(0);
     const handleCallbackTab = (dataFromChild) => {        
         setActiveTab(dataFromChild);
-        console.log('dataFromChild', dataFromChild);
       };
 
     return (

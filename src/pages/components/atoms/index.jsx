@@ -37,6 +37,20 @@ const functionIconButton = () => {
 };
 
 const AtomsPage = () => {
+
+    const dateEventTest = {
+        id: 'a1',
+        numberDay: 12,
+        month: 'Enero',
+        day: 'Lunes',
+        hour: '12:00'
+    }
+
+    const dateEventSelected = (dateEventData) => {
+        console.log(dateEventData);
+    };
+
+
     return (
         <div className="container mx-auto px-4" >
             <div className="my-5">
@@ -192,7 +206,7 @@ const AtomsPage = () => {
 
             <div className="my-5">
                 <h1 className="font-bold text-3xl mb-3">Date Events</h1>
-                <TkDateEvents />
+                <TkDateEvents dateEventData={dateEventTest} executeCardAction={dateEventSelected} />
             </div>
 
         </div>

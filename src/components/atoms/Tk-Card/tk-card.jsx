@@ -5,11 +5,12 @@ import PropTypes from 'prop-types';
 const TkCard = ({
     size,
     type,
-    children
+    children,
+    bgColor = 'light'
 }) => {
 
     return (
-        <div className={`shadow-lg rounded-xl card-container card-${size} card-${type} `} >
+        <div className={`shadow-lg rounded-xl card-container card-${size} card-${type} tk-bg-${bgColor} `} >
             <div>{children}</div>
         </div>
     )

@@ -2,16 +2,10 @@
 
 .tk-date-events{
     cursor: pointer;
+    display: inline-block;
 }
 
-.tk-date-events:focus {
-    border: 1px solid red;
-    /* color: var(--color-light);
-    background-color: var(--color-primary); */
-}
-
-.tk-date-event-active {
-    border: 1px solid red;
+.tk-date-event:active {
     color: var(--color-light);
     background-color: var(--color-primary);
 }

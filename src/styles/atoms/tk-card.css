@@ -1,7 +1,6 @@
 @import url('../settings/colors.css');
 
 .card-container{
-    background-color: var(--color-light);
     width: fit-content;
 }
 
@@ -35,6 +34,11 @@
 }
 
 .card-button:focus, .card-button:focus p {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+
+.card-button:active {
     background-color: var(--color-primary);
     color: var(--color-light);
 }

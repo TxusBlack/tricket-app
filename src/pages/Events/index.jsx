@@ -21,24 +21,67 @@ const priceEvent = '$1000 MXN';
 const imageHeader = 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
 const itemsSteps = [
- {
-    icon: 'IoMdPerson',
-    label: '1. Registrate o incia sesión',
- },
- {
-    icon: 'IoMdCart',
-    label: '2. Realiza la orden',
- },
- {
-    icon: 'IoMdCard',
-    label: '3. Confirma tus datos',
- },
+    {
+        icon: 'IoMdPerson',
+        label: '1. Registrate o incia sesión',
+    },
+    {
+        icon: 'IoMdCart',
+        label: '2. Realiza la orden',
+    },
+    {
+        icon: 'IoMdCard',
+        label: '3. Confirma tus datos',
+    },
 ];
 
 const itemsBreadcrumb = [
     { label: 'Fecha', url: '' },
     { label: 'Entradas', url: '' },
 ];
+
+const dateEventsList = [
+    {
+        id: 1,
+        date: '22 de Mayo 2024',
+        numberDay: '22',
+        day: 'SAB',
+        month: 'MAY',
+        hour: '12:00 PM'
+    },
+    {
+        id: 2,
+        date: '23 de Mayo 2024',
+        numberDay: '23',
+        day: 'DOM',
+        month: 'MAY',
+        hour: '12:00 PM'
+    },
+    {
+        id: 3,
+        date: '24 de Mayo 2024',
+        numberDay: '24',
+        day: 'LUN',
+        month: 'MAY',
+        hour: '12:00 PM'
+    },
+    {
+        id: 4,
+        date: '25 de Mayo 2021',
+        numberDay: '25',
+        day: 'MAR',
+        month: 'MAY',
+        hour: '12:00 PM'
+    },
+    {
+        id: 5,
+        date: '26 de Mayo 2021',
+        numberDay: '26',
+        day: 'MIE',
+        month: 'MAY',
+        hour: '12:00 PM'
+    }
+]
 
 const listTickets = [
     {
@@ -133,6 +176,10 @@ const BetterListTickets = [
 ];
 
 const EventsPage = () => {
+    const setDateEvent = (date) => {
+        console.log(date);
+    }
+
     return (
         <DefaultLayout image={WISHImage}>
             <div className="event">
@@ -174,11 +221,11 @@ const EventsPage = () => {
                 </div>
                 <div className="orden">
                     <TkCard size="auto">
-                        <TkSteps ArraySteps={itemsSteps}/>
-                        
+                        <TkSteps ArraySteps={itemsSteps} />
+
                     </TkCard>
                     <div className="event-buy">
-                    <TkLogin sizeCard="medium"/>
+                        <TkLogin sizeCard="medium" />
                         {/* <TkCard size="medium">
                             <h4>2. Registrate o incia sesión</h4>
                             <div className="event-buy--button">
@@ -192,18 +239,15 @@ const EventsPage = () => {
                         <TkBreadcrumb items={itemsBreadcrumb} />
                         <hr />
                         <div className="date-events p-4 my-2 flex space-x-4" >
-                            <TkDateEvents/>
-                            <TkDateEvents/>
-                            <TkDateEvents/>
-                            <TkDateEvents/>
-                            <TkDateEvents/>
+                            {dateEventsList.map((dateEvent, index) => (
+                                <TkDateEvents key={index} dateEventData={dateEvent} executeCardAction={setDateEvent} />
+                            ))}
                         </div>
                         <hr />
                         <div className="mt-5">
-                            <TkListTickets listTickets={listTickets} BetterListTickets={BetterListTickets}/>
+                            <TkListTickets listTickets={listTickets} BetterListTickets={BetterListTickets} />
                         </div>
                     </TkCard>
-
                 </div>
             </div>
         </DefaultLayout>

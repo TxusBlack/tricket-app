@@ -34,6 +34,9 @@ const TkIcon = ({
         let colorIcon = '--color-primary';
 
         switch (color) {
+            case 'light':
+                colorIcon = '--color-light';
+                break;
             case 'primary':
                 colorIcon = '--color-primary';
                 break;

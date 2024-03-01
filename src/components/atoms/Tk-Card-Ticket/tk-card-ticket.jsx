@@ -17,7 +17,7 @@ const TkCardTicket = ({
 
     const clickCardTicket = () => {
         setClicked(!clicked);
-        executeCardTicket();
+        executeCardTicket(!clicked);
     };
 
     return (
