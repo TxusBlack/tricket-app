@@ -7,8 +7,7 @@ import { useState } from 'react';
 
 
 const TkListTickets = ({
-    listTickets,
-    BetterListTickets,
+    listTicketsEvent
 }) => {
     const [activeTab, setActiveTab] = useState(0);
 
@@ -16,44 +15,30 @@ const TkListTickets = ({
         setActiveTab(dataFromChild);
     }
 
-    const tabsInfo = ['Pestaña 1', 'Pestaña 2'];
-
     return (
         <div>
             <TkTabsGroup>
-                <TkTabList tabsInfo={tabsInfo} setTabActive={handleCallbackTab} indexActiveTab = {activeTab} />
-                <TkTabContent isActiveTab={activeTab === 0}>
-                    {listTickets.map((ticket, index) => {
-                        return (
-                            <TkTicket
-                                key={index}
-                                price={ticket.value}
-                                currency={ticket.currency}
-                                sectionPosition={ticket.section}
-                                rowPosition={ticket.row}
-                                nameIcon={'IoIosArrowForward'}
-                            />
-
-                        )
-                    })}
-                </TkTabContent>
-                <TkTabContent isActiveTab={activeTab === 1}>
-                    {
-                        BetterListTickets.map((ticket, index) => {
-                            return (
-                                <TkTicket
-                                    key={index}
-                                    price={ticket.value}
-                                    currency={ticket.currency}
-                                    sectionPosition={ticket.section}
-                                    rowPosition={ticket.row}
-                                    nameIcon={'IoIosArrowForward'}
-                                />
-
-                            )
-                        })
-                    }
-                </TkTabContent>
+                <TkTabList tabsInfo={listTicketsEvent.titleTabs} setTabActive={handleCallbackTab} indexActiveTab={activeTab} />
+                {listTicketsEvent.listTickets.map((ticketEvent, idx) => {
+                    return (
+                        <TkTabContent isActiveTab={activeTab === idx} key={idx}>
+                            {
+                                ticketEvent.map((ticket, index) => {
+                                    return (
+                                        <TkTicket
+                                            key={index}
+                                            price={ticket.value}
+                                            currency={ticket.currency}
+                                            sectionPosition={ticket.section}
+                                            rowPosition={ticket.row}
+                                            nameIcon={'IoIosArrowForward'}
+                                        />
+                                    )
+                                })
+                            }
+                        </TkTabContent>
+                    )
+                })}
             </TkTabsGroup>
         </div>
     )
@@ -61,8 +46,7 @@ const TkListTickets = ({
 };
 
 TkListTickets.propTypes = {
-    listTickets: PropTypes.array.isRequired,
-    BetterListTickets: PropTypes.array.isRequired,
+    listTicketsEvent: PropTypes.object.isRequired
 };
 
 export default TkListTickets;

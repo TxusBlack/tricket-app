@@ -9,6 +9,7 @@ import WISHImage from '../../assets/images/WISH.svg';
 import TkDateEvents from "../../components/molecules/Tk-Date-Events/tk-date-events";
 import TkSteps from "../../components/molecules/Tk-Steps/tk-steps";
 import TkLogin from "../../components/templates/tk-login";
+import { useState } from "react";
 
 
 const titleEvent = 'Wish outdoor 2021';
@@ -18,7 +19,7 @@ const dateLabel = 'Fecha';
 const dateEvent = '22 de Mayo 2021';
 const priceLabel = 'Boletos desde';
 const priceEvent = '$1000 MXN';
-const imageHeader = 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+//const imageHeader = 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
 const itemsSteps = [
     {
@@ -81,103 +82,148 @@ const dateEventsList = [
         month: 'MAY',
         hour: '12:00 PM'
     }
+];
+
+const listTicketsArray = [
+    [
+        {
+            value: 1600,
+            currency: 'MXN',
+            section: 'General',
+            row: 'A',
+            date: '22 de Mayo 2024'
+        },
+        {
+            value: 1600,
+            currency: 'MXN',
+            section: 'General',
+            row: 'A',
+            date: '23 de Mayo 2024'
+        },
+        {
+            value: 1600,
+            currency: 'MXN',
+            section: 'General',
+            row: 'A',
+            date: '24 de Mayo 2024'
+        },
+        {
+            value: 1600,
+            currency: 'MXN',
+            section: 'General',
+            row: 'A',
+            date: '25 de Mayo 2024'
+        },
+        {
+            value: 1600,
+            currency: 'MXN',
+            section: 'General',
+            row: 'A',
+            date: '26 de Mayo 2024'
+        },
+        {
+            value: 1600,
+            currency: 'MXN',
+            section: 'General',
+            row: 'A',
+            date: '22 de Mayo 2024'
+        },
+        {
+            value: 1600,
+            currency: 'MXN',
+            section: 'General',
+            row: 'A',
+            date: '23 de Mayo 2024'
+        }
+    ],
+    [
+        {
+            value: 800,
+            currency: 'MXN',
+            section: 'v.i.p',
+            row: 'A',
+            date: '22 de Mayo 2024'
+        },
+        {
+            value: 800,
+            currency: 'MXN',
+            section: 'v.i.p',
+            row: 'A',
+            date: '23 de Mayo 2024'
+        },
+        {
+            value: 800,
+            currency: 'MXN',
+            section: 'v.i.p',
+            row: 'A',
+            date: '24 de Mayo 2024'
+        },
+        {
+            value: 800,
+            currency: 'MXN',
+            section: 'v.i.p',
+            row: 'A',
+            date: '25 de Mayo 2024'
+        },
+        {
+            value: 800,
+            currency: 'MXN',
+            section: 'v.i.p',
+            row: 'A',
+            date: '26 de Mayo 2024'
+        },
+        {
+            value: 800,
+            currency: 'MXN',
+            section: 'v.i.p',
+            row: 'A',
+            date: '22 de Mayo 2024'
+        },
+        {
+            value: 800,
+            currency: 'MXN',
+            section: 'v.i.p',
+            row: 'A',
+            date: '23 de Mayo 2024'
+        }
+    ]
 ]
 
-const listTickets = [
-    {
-        value: 1600,
-        currency: 'MXN',
-        section: 'General',
-        row: 'A',
-    },
-    {
-        value: 1600,
-        currency: 'MXN',
-        section: 'General',
-        row: 'A',
-    },
-    {
-        value: 1600,
-        currency: 'MXN',
-        section: 'General',
-        row: 'A',
-    },
-    {
-        value: 1600,
-        currency: 'MXN',
-        section: 'General',
-        row: 'A',
-    },
-    {
-        value: 1600,
-        currency: 'MXN',
-        section: 'General',
-        row: 'A',
-    },
-    {
-        value: 1600,
-        currency: 'MXN',
-        section: 'General',
-        row: 'A',
-    },
-    {
-        value: 1600,
-        currency: 'MXN',
-        section: 'General',
-        row: 'A',
-    }
+const listTicketsEvent = {
+    titleTabs: ['Precio', 'Mejores asientos'],
+    listTickets: listTicketsArray
+};
 
-];
-
-const BetterListTickets = [
-    {
-        value: 800,
-        currency: 'MXN',
-        section: 'v.i.p',
-        row: 'A',
-    },
-    {
-        value: 800,
-        currency: 'MXN',
-        section: 'v.i.p',
-        row: 'A',
-    },
-    {
-        value: 800,
-        currency: 'MXN',
-        section: 'v.i.p',
-        row: 'A',
-    },
-    {
-        value: 800,
-        currency: 'MXN',
-        section: 'v.i.p',
-        row: 'A',
-    },
-    {
-        value: 800,
-        currency: 'MXN',
-        section: 'v.i.p',
-        row: 'A',
-    },
-    {
-        value: 800,
-        currency: 'MXN',
-        section: 'v.i.p',
-        row: 'A',
-    },
-    {
-        value: 800,
-        currency: 'MXN',
-        section: 'v.i.p',
-        row: 'A',
-    }
-
-];
 
 const EventsPage = () => {
+    const [ticketsFilter, setTicketsFilter] = useState(listTicketsEvent);
+
+
+    const dateSelected = [];
+
     const setDateEvent = (date) => {
-        console.log(date);
+        const ticketsFiltereds = [];
+        const existDate = dateSelected.find((dateItem) => dateItem.id === date.id);
+        if (existDate) {
+            dateSelected.splice(dateSelected.indexOf(existDate), 1);
+        } else {
+            dateSelected.push(date);
+        }
+
+        dateSelected.forEach((dateItem) => {
+            listTicketsEvent.listTickets.forEach((tickets) => {
+                const ticketForDate = tickets.filter((ticket) => (ticket.date == dateItem.date))
+                console.log(ticketForDate);
+                ticketsFiltereds.push(ticketForDate);
+
+            });
+        });        
+
+        setTicketsFilter({
+            titleTabs: listTicketsEvent.titleTabs,
+            listTickets: [...ticketsFiltereds]
+        });
+
     }
 
     return (
@@ -245,7 +291,7 @@ const EventsPage = () => {
                         </div>
                         <hr />
                         <div className="mt-5">
-                            <TkListTickets listTickets={listTickets} BetterListTickets={BetterListTickets} />
+                            <TkListTickets listTicketsEvent={ticketsFilter} />
                         </div>
                     </TkCard>
                 </div>

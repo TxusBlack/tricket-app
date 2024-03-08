@@ -63,6 +63,10 @@
 }
 
 /* HOVER */
+.tk-bg-light:hover {
+    background-color: var(--color-light);
+}
+
 
 .tk-bg-primary:hover {
     background-color: var(--color-primary-hover);
@@ -75,7 +79,7 @@
 /* ACTIVE */
 
 .tk-bg-light:active {
-    background-color: var(--color-light-active);
+    background-color: var(--color-light);
 }
 
 .tk-bg-primary:active {
