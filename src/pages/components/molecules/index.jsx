@@ -13,14 +13,20 @@ import TkTabContent from '../../../components/molecules/Tk-Tabs/Tk-Tab-Content/t
 
 const itemsSteps = [
     {
+        id: 1,
+        sucess: false, 
         icon: 'IoMdPerson',
         label: '1. Registrate o incia sesión',
     },
     {
+        id: 2,
+        sucess: false,
         icon: 'IoMdCart',
         label: '2. Realiza la orden',
     },
     {
+        id: 3,
+        sucess: false,
         icon: 'IoMdCard',
         label: '3. Confirma tus datos',
     },

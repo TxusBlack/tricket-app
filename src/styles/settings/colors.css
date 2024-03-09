@@ -38,6 +38,10 @@
     background-color: var(--color-success);
 }
 
+.tk-bg-outline {
+    background-color: var(--color-outline);
+}
+
 .tk-text-light {
     color: var(--color-light);
 }

@@ -9,49 +9,27 @@ const TkIcon = ({
     color,
     className
 }) => {
+
+    const colorsIcon = {
+        light: '--color-light',
+        primary: '--color-primary',
+        success: '--color-success',
+        outline: '--color-outline'
+    }
+
+    const sizeIcon = {
+        small: '1rem',
+        medium: '1.5rem',
+        large: '2rem'
+    }
+
     const SelectedIcon = allIcons[iconName];
     const getSize = (size) => {
-        let sizeIcon = '1rem';
-        switch (size) {
-            case 'small':
-                sizeIcon = '1rem';
-                break;
-            case 'medium':
-                sizeIcon = '1.5rem';
-                break;
-            case 'large':
-                sizeIcon = '2rem';
-                break;
-            default:
-                sizeIcon = '1rem';
-                break
-        }
-
-        return sizeIcon;
+        return sizeIcon[size];
     };
 
     const getColor = (color) => {
-        let colorIcon = '--color-primary';
-
-        switch (color) {
-            case 'light':
-                colorIcon = '--color-light';
-                break;
-            case 'primary':
-                colorIcon = '--color-primary';
-                break;
-            case 'success':
-                colorIcon = '--color-success'
-                break;
-            case 'outline':
-                colorIcon = '--color-outline';
-                break;
-
-            default:
-                break;
-        }
-
-        return getComputedStyle(document.documentElement).getPropertyValue(colorIcon);
+        return getComputedStyle(document.documentElement).getPropertyValue(colorsIcon[color]);
     };
 
     if (!SelectedIcon) {
@@ -69,7 +47,9 @@ const TkIcon = ({
 }
 
 TkIcon.propTypes = {
-    iconName: PropTypes.string.isRequired
+    iconName: PropTypes.string.isRequired,
+    size: PropTypes.string,
+    color: PropTypes.string    
 };
 
 export default TkIcon

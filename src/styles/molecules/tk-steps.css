@@ -9,8 +9,7 @@
 }
 
 .tk-steps-line {
-    border: none;
-    border-top: 3px solid var(--color-success);
+    height: 4px;
     width: 50px;
     margin: auto;
 }
